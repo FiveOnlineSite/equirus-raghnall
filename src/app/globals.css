@@ -22,3 +22,19 @@ a,
 button {
   outline-offset: 4px;
 }
+.testimonials-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin-inline: 4px !important;
+  border: 1px solid white;
+  background: transparent;
+  opacity: 1;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: white;
+}

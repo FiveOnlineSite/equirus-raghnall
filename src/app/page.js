@@ -2,42 +2,106 @@ import Image from "next/image";
 import Link from "next/link";
 import CounterStats from "./components/CounterStats";
 import Footer from "./components/Footer";
+import FaqSection from "./components/FaqSection";
 import Navbar from "./components/Navbar";
+import TestimonialsCarousel from "./components/TestimonialsCarousel";
 
 const services = [
   {
     title: "Private Clients",
-    description: "Tailored insurance solutions designed to protect wealth, lifestyle, and long-term financial security.",
-    icon: "/assets/service-health.svg",
+    description:
+      "Tailored insurance solutions designed to protect wealth, lifestyle, and long-term financial security.",
+    icon: "/assets/client.svg",
     href: "/private-clients",
   },
   {
     title: "Commercial",
-    description: "Strategic insurance solutions designed to protect businesses, assets, and operations from risks.",
-    icon: "/assets/service-commercial.svg",
+    description:
+      "Strategic insurance solutions designed to protect businesses, assets, and operations from risks.",
+    icon: "/assets/commercial.svg",
     href: "/commercial",
   },
   {
     title: "Reinsurance",
-    description: "Specialized reinsurance solutions designed to optimize risk transfer and strengthen financial stability.",
-    icon: "/assets/service-reinsurance.svg",
+    description:
+      "Specialized reinsurance solutions designed to optimize risk transfer and strengthen financial stability.",
+    icon: "/assets/reinsurance.svg",
     href: "/reinsurance",
   },
 ];
 
 const serviceSnapshots = [
-  { category: "Private", title: "Health Insurance", description: "Individual and family health plans with access to premium hospital networks and international medical coverage." },
-  { category: "Private", title: "Life & PCG", description: "Wealth-protective strategies and private client group coverage for ultra HNI families and business principals." },
-  { category: "Private", title: "Auto Insurance", description: "Comprehensive motor coverage for personal and fleet vehicles with dedicated claims support and accident assistance." },
-  { category: "Commercial", title: "Employee Benefits", description: "Group health, life, and wellness programs designed to attract, retain, and protect your workforce." },
-  { category: "Commercial", title: "Liability & Cyber", description: "D&O, E&O, EPL, and cyber fidelity solutions for the modern regulatory and threat environment." },
-  { category: "Commercial", title: "Treaty & Facultative", description: "Structured reinsurance placements via our global network across Lloyd's, European, and Asian markets." },
+  {
+    category: "Private",
+    title: "Health Insurance",
+    description:
+      "Individual and family health plans with access to premium hospital networks and international medical coverage.",
+  },
+  {
+    category: "Private",
+    title: "Life & PCG",
+    description:
+      "Wealth-protective strategies and private client group coverage for ultra HNI families and business principals.",
+  },
+  {
+    category: "Private",
+    title: "Auto Insurance",
+    description:
+      "Comprehensive motor coverage for personal and fleet vehicles with dedicated claims support and accident assistance.",
+  },
+  {
+    category: "Commercial",
+    title: "Employee Benefits",
+    description:
+      "Group health, life, and wellness programs designed to attract, retain, and protect your workforce.",
+  },
+  {
+    category: "Commercial",
+    title: "Liability & Cyber",
+    description:
+      "D&O, E&O, EPL, and cyber fidelity solutions for the modern regulatory and threat environment.",
+  },
+  {
+    category: "Commercial",
+    title: "Treaty & Facultative",
+    description:
+      "Structured reinsurance placements via our global network across Lloyd's, European, and Asian markets.",
+  },
 ];
 
 const heroProducts = [
-  { category: "Private Clients", title: "Auto Insurance", description: "Protect your vehicle against accidents, damage, theft, and third-party liabilities with coverage designed for real-world driving risks.", image: "/assets/solution-auto.png", href: "/private-clients" },
-  { category: "Commercial", title: "Employee Benefits", description: "Tailored employee benefit solutions that enhance protection, improve retention, and support a healthier, more secure workforce.", image: "/assets/solution-benefits.png", href: "/commercial" },
-  { category: "Private", title: "Health Insurance", description: "Coverage for medical expenses, hospitalization, and critical care — ensuring financial security during unexpected health situations.", image: "/assets/solution-health.png", href: "/private-clients" },
+  {
+    category: "Private Clients",
+    title: "Auto Insurance",
+    description:
+      "Protect your vehicle against accidents, damage, theft, and third-party liabilities with coverage designed for real-world driving risks.",
+    image: "/assets/solution-auto.png",
+    href: "/private-clients",
+  },
+  {
+    category: "Commercial",
+    title: "Employee Benefits",
+    description:
+      "Tailored employee benefit solutions that enhance protection, improve retention, and support a healthier, more secure workforce.",
+    image: "/assets/solution-benefits.png",
+    href: "/commercial",
+  },
+  {
+    category: "Private",
+    title: "Health Insurance",
+    description:
+      "Coverage for medical expenses, hospitalization, and critical care — ensuring financial security during unexpected health situations.",
+    image: "/assets/solution-health.png",
+    href: "/private-clients",
+  },
+];
+
+const homeFaqs = [
+  { question: "What types of insurance solutions do you offer?", answer: "We offer private client, commercial, employee benefit, and reinsurance solutions tailored to individual and business requirements." },
+  { question: "How do you help choose the right insurance plan?", answer: "We assess your specific needs, risk exposure, and long-term goals to recommend solutions that are structured, relevant, and not product-driven." },
+  { question: "Do you assist with claims as well?", answer: "Yes. Our claim advocacy team supports you throughout documentation, coordination, negotiation, and settlement." },
+  { question: "Can I customize my insurance coverage?", answer: "Yes. We design coverage around your risks and priorities, combining suitable policies and limits instead of relying on a one-size-fits-all package." },
+  { question: "How do I get Started?", answer: "Contact our advisory team to schedule an initial consultation. We will review your requirements and recommend the appropriate next steps." },
 ];
 
 export default function Home() {
@@ -47,7 +111,7 @@ export default function Home() {
       <main>
         <section className="min-h-[610px] bg-white">
           <div className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 md:py-16 xl:px-20">
-            <div className="max-w-[560px]">
+            <div className="max-w-[600px]">
               <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
@@ -57,9 +121,9 @@ export default function Home() {
                 Complete Risk Strategy.
               </h1>
               <p className="mt-8 max-w-[520px] text-base leading-7 text-[#555555]">
-                We partner with individuals, businesses, and institutions to structure
-                insurance that protects, performs, and scales with evolving risk
-                landscapes.
+                We partner with individuals, businesses, and institutions to
+                structure insurance that protects, performs, and scales with
+                evolving risk landscapes.
               </p>
               <Link
                 href="#services"
@@ -70,41 +134,79 @@ export default function Home() {
 
               <div className="mt-16 flex items-center gap-5">
                 <div className="flex -space-x-3" aria-hidden="true">
-                  {["18% center", "51% center", "84% center"].map((position) => (
-                    <span key={position} className="relative block size-11 overflow-hidden rounded-full border border-[#8f8f8f] bg-white ring-2 ring-white">
-                      <Image
-                        src="/assets/home-hero.png"
-                        alt=""
-                        fill
-                        sizes="44px"
-                        className="object-cover"
-                        style={{ objectPosition: position }}
-                      />
-                    </span>
-                  ))}
+                  {["10% center", "36% center", "62% center", "88% center"].map(
+                    (position) => (
+                      <span
+                        key={position}
+                        className="relative block size-11 overflow-hidden rounded-full border border-[#8f8f8f] bg-white ring-2 ring-white"
+                      >
+                        <Image
+                          src="/assets/home-hero.png"
+                          alt=""
+                          fill
+                          sizes="44px"
+                          className="object-cover"
+                          style={{ objectPosition: position }}
+                        />
+                      </span>
+                    ),
+                  )}
                 </div>
-                <p className="text-sm font-medium text-[#242424]">Trusted by over 10M+ People</p>
+                <p className="text-sm font-medium text-[#242424]">
+                  Trusted by over 10M+ People
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="services" className="border-t border-[#ececec] bg-white pt-16 md:pt-20">
+        <section
+          id="services"
+          className="border-t border-[#ececec] bg-white pt-16 md:pt-20"
+        >
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">Three Segments</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Our Core Insurance Solutions</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+                Three Segments
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+                Our Core Insurance Solutions
+              </h2>
             </div>
 
             <div className="mt-14 grid pb-16 md:grid-cols-3 md:pb-20">
               {services.map((service, index) => (
-                <article key={service.title} className={`py-8 md:px-12 md:py-0 xl:px-16 ${index ? "border-t border-[#b8b8b8] md:border-l md:border-t-0" : ""}`}>
-                  <Image src={service.icon} alt="" width={34} height={34} aria-hidden className="size-[34px] object-contain" />
-                  <h3 className="mt-5 text-xl font-semibold text-[#151515]">{service.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-[#555555]">{service.description}</p>
-                  <Link href={service.href} className="mt-7 inline-flex items-center gap-3 text-sm font-semibold text-[#0A4E08] transition hover:opacity-70">
+                <article
+                  key={service.title}
+                  className={`py-8 md:px-8 md:py-0 xl:px-10 ${index ? "border-t border-[#b8b8b8] md:border-l md:border-t-0" : ""}`}
+                >
+                  <Image
+                    src={service.icon}
+                    alt=""
+                    width={48}
+                    height={48}
+                    aria-hidden
+                    className="size-12 object-contain"
+                  />
+                  <h3 className="mt-5 text-xl font-semibold text-[#151515]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 min-h-[84px] text-base leading-7 text-[#555555]">
+                    {service.description}
+                  </p>
+                  <Link
+                    href={service.href}
+                    className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+                  >
                     Know More
-                    <span className="grid size-5 place-items-center rounded-full border border-current" aria-hidden="true">→</span>
+                    <Image
+                      src="/assets/arrow-right.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                      className="size-[20px]"
+                      aria-hidden
+                    />
                   </Link>
                 </article>
               ))}
@@ -116,20 +218,40 @@ export default function Home() {
         <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f8f9ff_100%)] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">Services Snapshots</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Risk Advisory Beyond The Policy</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+                Services Snapshots
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+                Risk Advisory Beyond The Policy
+              </h2>
             </div>
 
             <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {serviceSnapshots.map((service) => (
-                <article key={service.title} className="group flex min-h-[245px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_30px_rgba(25,34,80,0.03)] transition duration-300 hover:-translate-y-1 hover:bg-[#0A4E08] hover:shadow-[0_14px_35px_rgba(10,78,8,0.18)] md:p-7">
+                <article
+                  key={service.title}
+                  className="group flex min-h-[245px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_30px_rgba(25,34,80,0.03)] transition duration-300 hover:-translate-y-1 hover:bg-[#0A4E08] hover:shadow-[0_14px_35px_rgba(10,78,8,0.18)] hover:cursor-pointer md:p-7"
+                >
                   <div className="flex items-center justify-between">
-                    <span className="rounded-sm bg-[#F1F9ED] px-2.5 py-1 text-xs font-medium uppercase text-[#0A4E08] transition-colors group-hover:bg-white/20 group-hover:text-white">{service.category}</span>
-                    <span className="grid size-6 place-items-center rounded-full border border-[#0A4E08] text-sm text-[#0A4E08] transition-colors group-hover:border-white group-hover:text-white" aria-hidden="true">↗</span>
+                    <span className="rounded-sm bg-[#EBFFD666] px-2.5 py-1 text-xs font-medium uppercase text-[#0A4E08] transition-colors group-hover:text-white">
+                      {service.category}
+                    </span>
+                    <Image
+                      src="/assets/arrow-right-up.svg"
+                      alt=""
+                      width={26}
+                      height={26}
+                      className="size-[26px]"
+                      aria-hidden
+                    />
                   </div>
                   <div className="mt-auto pt-12">
-                    <h3 className="text-xl font-semibold text-[#151515] transition-colors group-hover:text-white">{service.title}</h3>
-                    <p className="mt-3 text-base leading-7 text-[#555555] transition-colors group-hover:text-white/90">{service.description}</p>
+                    <h3 className="text-xl font-semibold text-[#151515] transition-colors group-hover:text-white">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-7 text-[#555555] transition-colors group-hover:text-white/90">
+                      {service.description}
+                    </p>
                   </div>
                 </article>
               ))}
@@ -140,15 +262,34 @@ export default function Home() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20 xl:px-20">
             <div className="max-w-[560px]">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">Our Difference</p>
-              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Why Equirus Raghnall?</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+                Our Difference
+              </p>
+              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+                Why Equirus Raghnall?
+              </h2>
               <p className="mt-7 text-base leading-7 text-[#555555]">
-                We are an independent, IRDAI-registered insurance broker with a singular focus: putting our clients&apos; interests first. Our advisory model is built on objectivity, depth of expertise, and long-term partnership
+                We are an independent, IRDAI-registered insurance broker with a
+                singular focus: putting our clients&apos; interests first. Our
+                advisory model is built on objectivity, depth of expertise, and
+                long-term partnership
               </p>
               <ul className="mt-9 space-y-5 text-base font-medium text-[#181818]">
-                {["Independent Risk Advisory", "End-to-end Claim Advocacy", "Tailored Coverage Architecture", "Pan India & Global Reach"].map((item) => (
+                {[
+                  "Independent Risk Advisory",
+                  "End-to-end Claim Advocacy",
+                  "Tailored Coverage Architecture",
+                  "Pan India & Global Reach",
+                ].map((item) => (
                   <li key={item} className="flex items-center gap-4">
-                    <svg viewBox="0 0 24 24" className="size-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m3 12 5 5L20 5" /><path d="m8 12 3 3 7-7" /></svg>
+                    <Image
+                      src="/assets/double-tick.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                      className="size-5 shrink-0"
+                      aria-hidden
+                    />
                     {item}
                   </li>
                 ))}
@@ -156,9 +297,18 @@ export default function Home() {
             </div>
 
             <div className="relative mx-auto w-full max-w-[560px] pb-2 pr-2">
-              <span className="absolute inset-x-4 bottom-0 top-4 rounded-md bg-[#30337A]" aria-hidden="true" />
-              <div className="relative aspect-[1.2/1] overflow-hidden rounded-md bg-white">
-                <Image src="/assets/home-why-us.png" alt="Advisers discussing tailored insurance solutions" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover object-center" />
+              <span
+                className="absolute bottom-0 left-[30%] right-0 top-[8%] rounded-[6px] bg-[#30337A]"
+                aria-hidden="true"
+              />
+              <div className="relative aspect-[1.2/1] overflow-hidden rounded-[6px] bg-white">
+                <Image
+                  src="/assets/home-why-us.png"
+                  alt="Advisers discussing tailored insurance solutions"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 560px"
+                  className="object-cover object-center"
+                />
               </div>
             </div>
           </div>
@@ -167,23 +317,52 @@ export default function Home() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">Flagship Offerings</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Our Hero Products</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+                Flagship Offerings
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+                Our Hero Products
+              </h2>
             </div>
 
             <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {heroProducts.map((product) => (
-                <article key={product.title} className="overflow-hidden rounded-lg bg-white shadow-[0_2px_12px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]">
+                <article
+                  key={product.title}
+                  className="overflow-hidden rounded-lg bg-white shadow-[0_2px_12px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
+                >
                   <div className="relative aspect-[1.85/1] overflow-hidden">
-                    <Image src={product.image} alt={product.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover transition duration-500 hover:scale-[1.03]" />
-                    <span className="absolute left-4 top-4 rounded bg-white/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">{product.category}</span>
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition duration-500 hover:scale-[1.03]"
+                    />
+                    <span className="absolute left-4 top-4 rounded bg-white/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+                      {product.category}
+                    </span>
                   </div>
                   <div className="p-5 md:p-6">
-                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#111111]">{product.title}</h3>
-                    <p className="mt-4 text-base leading-7 text-[#555555]">{product.description}</p>
-                    <Link href={product.href} className="mt-7 inline-flex items-center gap-3 text-sm font-semibold text-[#0A4E08] transition hover:opacity-70">
+                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#111111]">
+                      {product.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-[#555555]">
+                      {product.description}
+                    </p>
+                    <Link
+                      href={product.href}
+                      className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+                    >
                       Explore
-                      <span className="grid size-5 place-items-center rounded-full border border-current" aria-hidden="true">→</span>
+                      <Image
+                        src="/assets/arrow-right.svg"
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="size-[20px]"
+                        aria-hidden
+                      />
                     </Link>
                   </div>
                 </article>
@@ -191,6 +370,91 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <TestimonialsCarousel />
+
+        <section className="bg-[#F8F9FF] py-16 md:py-20">
+          <div className="mx-auto grid max-w-[1440px] gap-10 px-5 md:px-10 lg:grid-cols-[0.9fr_1fr_1fr] lg:gap-5 xl:px-20">
+            <div className="self-center lg:pr-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+                Thought Leadership
+              </p>
+              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">
+                Beyond The Policy
+              </h2>
+              <p className="mt-6 max-w-[390px] text-base leading-7 text-[#555555]">
+                Market updates, risk reports, and case studies from our advisory
+                team helping you stay ahead of emerging risks and regulatory
+                changes.
+              </p>
+              <Link
+                href="/blogs"
+                className="mt-8 inline-flex h-12 min-w-40 items-center justify-center rounded-md border border-[#0A4E08] px-7 text-base font-semibold text-[#0A4E08] transition hover:bg-[#0A4E08] hover:text-white"
+              >
+                View All
+              </Link>
+            </div>
+
+            {[
+              {
+                image: "/assets/blog-risk-management.png",
+                title:
+                  "Understanding D&O Liability in India's Evolving Corporate Governance Landscape",
+              },
+              {
+                image: "/assets/insight-mistakes.png",
+                title:
+                  "Cyber Insurance in India: Why every business needs it in 2026",
+              },
+            ].map((article) => (
+              <article key={article.title}>
+                <Link href="/blogs" className="group block">
+                  <div className="relative aspect-[1.55/1] overflow-hidden rounded-lg bg-[#e8e8e8]">
+                    <Image
+                      src={article.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    />
+                    <span className="absolute left-3 top-3 rounded bg-black/45 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                      Blog
+                    </span>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-sm text-[#666666]">
+                    <time dateTime="2026-07-11">11 Jul</time>
+                    <span>2 min read</span>
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold leading-7 tracking-[-0.01em] text-[#181818] transition-colors group-hover:text-[#0A4E08]">
+                    {article.title}
+                  </h3>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <FaqSection title="Answers to Common Insurance Queries" items={homeFaqs} />
+
+        <section className="bg-white py-14 md:py-16">
+          <div className="mx-auto flex max-w-[1440px] flex-col items-start px-5 text-left md:px-10 xl:px-20">
+            <Image
+              src="/assets/raghnall-logo.png"
+              alt="Equirus Raghnall"
+              width={175}
+              height={175}
+              className="h-auto w-[175px] object-contain"
+            />
+            <p className="mt-4 text-sm leading-7 text-[#555555]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse...
+            </p>
+            <Link href="/about-us" className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition hover:opacity-70">
+              Read More
+              <Image src="/assets/arrow-right.svg" alt="" width={18} height={18} className="size-[20px]" aria-hidden />
+            </Link>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>

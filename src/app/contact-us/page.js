@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import OfficePresenceMap from "./OfficePresenceMap";
 
 export const metadata = {
   title: "Contact Us | Equirus Raghnall",
@@ -108,7 +109,7 @@ export default function ContactUsPage() {
         <section className="mx-auto max-w-[1440px] px-5 pb-24 pt-4 text-center md:px-10 md:pb-32 xl:px-20">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4E08]">Our Presence</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Across India, Always Within Reach</h2>
-          <Image src="/assets/office-map.png" alt="Equirus Raghnall locations across India" width={752} height={656} className="mx-auto mt-12 h-auto w-full max-w-3xl" />
+          <OfficePresenceMap />
         </section>
       </main>
       <Footer />
