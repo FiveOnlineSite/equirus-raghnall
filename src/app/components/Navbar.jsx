@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-4 md:px-8 xl:px-16">
         <Link href="/" aria-label="Equirus Raghnall home" className="shrink-0">
           <Image
-            src="/assets/raghnall-logo.png"
+            src="/assets/shared/raghnall-logo.png"
             alt="Equirus Raghnall"
             width={130}
             height={104}
@@ -39,7 +39,7 @@ export default function Navbar() {
               {item.label}
               {item.children && (
                 <Image
-                  src="/assets/chevron-down.svg"
+                  src="/assets/shared/chevron-down.svg"
                   alt=""
                   width={20}
                   height={20}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 {item.label}
                 {item.children && (
                   <Image
-                    src="/assets/chevron-down.svg"
+                    src="/assets/shared/chevron-down.svg"
                     alt=""
                     width={20}
                     height={20}

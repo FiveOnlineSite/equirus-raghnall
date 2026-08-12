@@ -67,7 +67,7 @@ export default function TestimonialsCarousel() {
                 <p className="mt-3 text-sm leading-7 text-[#555555]">{testimonial.quote}</p>
                 <div className="mt-auto flex items-center gap-3 pt-8">
                   <span className="relative size-9 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
-                    <Image src="/assets/home-hero.png" alt="" fill sizes="36px" className="object-cover" style={{ objectPosition: testimonial.imagePosition }} />
+                    <Image src="/assets/home/home-hero.png" alt="" fill sizes="36px" className="object-cover" style={{ objectPosition: testimonial.imagePosition }} />
                   </span>
                   <p className="font-semibold text-[#181818]">{testimonial.name}</p>
                 </div>

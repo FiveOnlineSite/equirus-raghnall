@@ -90,15 +90,15 @@ export default function ContactUsPage() {
                 <h3 className="text-2xl font-semibold">Gift City</h3>
                 <p className="mt-5 text-lg font-semibold">Equirus Securities Pvt. Ltd</p>
                 <div className="mt-4 flex items-start gap-3">
-                  <Image src="/assets/map-pin.svg" alt="" width={20} height={20} aria-hidden className="mt-1 size-5 shrink-0" />
+                  <Image src="/assets/shared/map-pin.svg" alt="" width={20} height={20} aria-hidden className="mt-1 size-5 shrink-0" />
                   <address className="not-italic leading-7 text-white/90">Unit no. GA–27, Seat no. 1–6, Ground Floor, Pragya Accelerator, Block–15 T, Road 11, Zone 1, Processing area, GIFT SEZ, GIFT City, Gandhinagar 382355</address>
                 </div>
                 <p className="mt-5 flex items-center gap-3">
-                  <Image src="/assets/phone.svg" alt="" width={20} height={20} aria-hidden className="size-5 shrink-0" />
+                  <Image src="/assets/shared/phone.svg" alt="" width={20} height={20} aria-hidden className="size-5 shrink-0" />
                   <a href="tel:+912243320700">+91-22-4332-0700</a>
                 </p>
                 <p className="mt-3 flex items-center gap-3">
-                  <Image src="/assets/mail.svg" alt="" width={20} height={20} aria-hidden className="size-5 shrink-0" />
+                  <Image src="/assets/shared/mail.svg" alt="" width={20} height={20} aria-hidden className="size-5 shrink-0" />
                   <a href="mailto:wealth@equiruswealth.com">wealth@equiruswealth.com</a>
                 </p>
               </div>

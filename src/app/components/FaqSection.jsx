@@ -40,7 +40,7 @@ export default function FaqSection({
                   >
                     <span>{index + 1}. {item.question}</span>
                     <Image
-                      src="/assets/faq-chevron.svg"
+                      src="/assets/shared/faq-chevron.svg"
                       alt=""
                       width={20}
                       height={20}

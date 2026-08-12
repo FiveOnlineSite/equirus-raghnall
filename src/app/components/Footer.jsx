@@ -21,12 +21,12 @@ export default function Footer() {
           <section className="text-sm leading-6">
             <h2 className="mb-[18px] font-bold text-base leading-7">Contact Details</h2>
             <div className="space-y-4">
-              <ContactRow icon="/assets/map-pin.svg"><address className="not-italic">Technopolis Knowledge Park, Ground Floor, Unit No. 15 &amp;16, Mahakali Caves Road, Andheri East, Mumbai - 400093</address><p className="mt-2">Delhi&nbsp; | &nbsp;Surat&nbsp; | &nbsp;Pune&nbsp; |</p></ContactRow>
-              <ContactRow icon="/assets/phone.svg"><a href="tel:+919876543210">+91 9876543210</a></ContactRow>
-              <ContactRow icon="/assets/mail.svg"><a href="mailto:email@equirusraghnall.com">email@equirusraghnall.com</a></ContactRow>
+              <ContactRow icon="/assets/shared/map-pin.svg"><address className="not-italic">Technopolis Knowledge Park, Ground Floor, Unit No. 15 &amp;16, Mahakali Caves Road, Andheri East, Mumbai - 400093</address><p className="mt-2">Delhi&nbsp; | &nbsp;Surat&nbsp; | &nbsp;Pune&nbsp; |</p></ContactRow>
+              <ContactRow icon="/assets/shared/phone.svg"><a href="tel:+919876543210">+91 9876543210</a></ContactRow>
+              <ContactRow icon="/assets/shared/mail.svg"><a href="mailto:email@equirusraghnall.com">email@equirusraghnall.com</a></ContactRow>
             </div>
             <h2 className="mb-[18px] mt-5 font-bold text-base leading-7">Follow Us</h2>
-            <div className="flex gap-2">{[["facebook.svg", "Facebook"], ["instagram.svg", "Instagram"], ["linkedin.svg", "LinkedIn"]].map(([icon, label]) => <a href="#" aria-label={label} key={label} className="grid size-6 place-items-center"><Image src={`/assets/${icon}`} alt="" width={24} height={24} aria-hidden /></a>)}</div>
+            <div className="flex gap-2">{[["facebook.svg", "Facebook"], ["instagram.svg", "Instagram"], ["linkedin.svg", "LinkedIn"]].map(([icon, label]) => <a href="#" aria-label={label} key={label} className="grid size-6 place-items-center"><Image src={`/assets/shared/${icon}`} alt="" width={24} height={24} aria-hidden /></a>)}</div>
           </section>
 
           <div className="space-y-[18px]"><FooterLinkList title="Services" items={services} /><FooterLinkList title="Links" items={links} /></div>
@@ -42,14 +42,14 @@ export default function Footer() {
           </section>
 
           <section className="space-y-2 lg:pt-[13px]">
-            <Image src="/assets/ibai-logo.png" alt="Insurance Brokers Association of India" width={343} height={84} className="h-auto w-full" />
-            <Image src="/assets/office-map.png" alt="Map of Equirus Raghnall office locations across India" width={343} height={328} className="h-auto w-full" />
+            <Image src="/assets/shared/ibai-logo.png" alt="Insurance Brokers Association of India" width={343} height={84} className="h-auto w-full" />
+            <Image src="/assets/shared/office-map.png" alt="Map of Equirus Raghnall office locations across India" width={343} height={328} className="h-auto w-full" />
           </section>
         </div>
 
         <div className="mt-12 flex flex-col gap-5 border-t border-white/60 pt-4 text-sm leading-6 lg:mt-[27px] lg:flex-row lg:items-center lg:justify-between">
           <nav aria-label="Legal" className="flex flex-wrap gap-y-2">{legalLinks.map((item, index) => <Link key={item} href="#" className={`hover:underline ${index ? "ml-3 border-l border-white/70 pl-3" : ""}`}>{item}</Link>)}</nav>
-          <p className="flex items-center gap-2 whitespace-normal lg:whitespace-nowrap"><Image src="/assets/copyright.svg" alt="" width={20} height={20} aria-hidden className="size-5" />2026 Equirus Raghnall Insurance All Rights Reserved</p>
+          <p className="flex items-center gap-2 whitespace-normal lg:whitespace-nowrap"><Image src="/assets/shared/copyright.svg" alt="" width={20} height={20} aria-hidden className="size-5" />2026 Equirus Raghnall Insurance All Rights Reserved</p>
         </div>
       </div>
     </footer>

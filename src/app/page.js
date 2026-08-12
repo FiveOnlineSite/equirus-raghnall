@@ -11,21 +11,21 @@ const services = [
     title: "Private Clients",
     description:
       "Tailored insurance solutions designed to protect wealth, lifestyle, and long-term financial security.",
-    icon: "/assets/client.svg",
+    icon: "/assets/home/client.svg",
     href: "/private-clients",
   },
   {
     title: "Commercial",
     description:
       "Strategic insurance solutions designed to protect businesses, assets, and operations from risks.",
-    icon: "/assets/commercial.svg",
+    icon: "/assets/home/commercial.svg",
     href: "/commercial",
   },
   {
     title: "Reinsurance",
     description:
       "Specialized reinsurance solutions designed to optimize risk transfer and strengthen financial stability.",
-    icon: "/assets/reinsurance.svg",
+    icon: "/assets/home/reinsurance.svg",
     href: "/reinsurance",
   },
 ];
@@ -75,7 +75,7 @@ const heroProducts = [
     title: "Auto Insurance",
     description:
       "Protect your vehicle against accidents, damage, theft, and third-party liabilities with coverage designed for real-world driving risks.",
-    image: "/assets/solution-auto.png",
+    image: "/assets/home/solution-auto.png",
     href: "/private-clients",
   },
   {
@@ -83,7 +83,7 @@ const heroProducts = [
     title: "Employee Benefits",
     description:
       "Tailored employee benefit solutions that enhance protection, improve retention, and support a healthier, more secure workforce.",
-    image: "/assets/solution-benefits.png",
+    image: "/assets/home/solution-benefits.png",
     href: "/commercial",
   },
   {
@@ -91,7 +91,7 @@ const heroProducts = [
     title: "Health Insurance",
     description:
       "Coverage for medical expenses, hospitalization, and critical care — ensuring financial security during unexpected health situations.",
-    image: "/assets/solution-health.png",
+    image: "/assets/home/solution-health.png",
     href: "/private-clients",
   },
 ];
@@ -141,7 +141,7 @@ export default function Home() {
                         className="relative block size-11 overflow-hidden rounded-full border border-[#8f8f8f] bg-white ring-2 ring-white"
                       >
                         <Image
-                          src="/assets/home-hero.png"
+                          src="/assets/home/home-hero.png"
                           alt=""
                           fill
                           sizes="44px"
@@ -200,7 +200,7 @@ export default function Home() {
                   >
                     Know More
                     <Image
-                      src="/assets/arrow-right.svg"
+                      src="/assets/shared/arrow-right.svg"
                       alt=""
                       width={20}
                       height={20}
@@ -237,7 +237,7 @@ export default function Home() {
                       {service.category}
                     </span>
                     <Image
-                      src="/assets/arrow-right-up.svg"
+                      src="/assets/shared/arrow-right-up.svg"
                       alt=""
                       width={26}
                       height={26}
@@ -283,7 +283,7 @@ export default function Home() {
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-4">
                     <Image
-                      src="/assets/double-tick.svg"
+                      src="/assets/shared/double-tick.svg"
                       alt=""
                       width={20}
                       height={20}
@@ -303,7 +303,7 @@ export default function Home() {
               />
               <div className="relative aspect-[1.2/1] overflow-hidden rounded-[6px] bg-white">
                 <Image
-                  src="/assets/home-why-us.png"
+                  src="/assets/home/home-why-us.png"
                   alt="Advisers discussing tailored insurance solutions"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"
@@ -356,7 +356,7 @@ export default function Home() {
                     >
                       Explore
                       <Image
-                        src="/assets/arrow-right.svg"
+                        src="/assets/shared/arrow-right.svg"
                         alt=""
                         width={20}
                         height={20}
@@ -397,12 +397,12 @@ export default function Home() {
 
             {[
               {
-                image: "/assets/blog-risk-management.png",
+                image: "/assets/blogs/blog-risk-management.png",
                 title:
                   "Understanding D&O Liability in India's Evolving Corporate Governance Landscape",
               },
               {
-                image: "/assets/insight-mistakes.png",
+                image: "/assets/home/insight-mistakes.png",
                 title:
                   "Cyber Insurance in India: Why every business needs it in 2026",
               },
@@ -439,7 +439,7 @@ export default function Home() {
         <section className="bg-white py-14 md:py-16">
           <div className="mx-auto flex max-w-[1440px] flex-col items-start px-5 text-left md:px-10 xl:px-20">
             <Image
-              src="/assets/raghnall-logo.png"
+              src="/assets/shared/raghnall-logo.png"
               alt="Equirus Raghnall"
               width={175}
               height={175}
@@ -450,7 +450,7 @@ export default function Home() {
             </p>
             <Link href="/about-us" className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition hover:opacity-70">
               Read More
-              <Image src="/assets/arrow-right.svg" alt="" width={18} height={18} className="size-[20px]" aria-hidden />
+              <Image src="/assets/shared/arrow-right.svg" alt="" width={18} height={18} className="size-[20px]" aria-hidden />
             </Link>
           </div>
         </section>

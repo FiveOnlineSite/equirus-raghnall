@@ -20,9 +20,9 @@ const locations = [
 ];
 
 const pinAssets = {
-  green: "/assets/location-pin-current.svg",
-  blue: "/assets/location-pin-upcoming.svg",
-  "registered-green": "/assets/location-pin-registered.svg",
+  green: "/assets/contact/location-pin-current.svg",
+  blue: "/assets/contact/location-pin-upcoming.svg",
+  "registered-green": "/assets/contact/location-pin-registered.svg",
 };
 
 const legend = [
@@ -36,7 +36,7 @@ export default function OfficePresenceMap() {
     <div className="relative mx-auto mt-10 w-full max-w-[1120px] md:mt-12">
       <div className="flex justify-center md:min-h-[720px]">
         <div className="relative aspect-square w-full max-w-[822px]">
-          <Image src="/assets/india-presence-map.svg" alt="" fill sizes="(max-width: 768px) 100vw, 822px" className="object-contain" aria-hidden />
+          <Image src="/assets/contact/india-presence-map.svg" alt="" fill sizes="(max-width: 768px) 100vw, 822px" className="object-contain" aria-hidden />
           {locations.map((location) => (
             <div
               className="group absolute z-10 -translate-x-1/2 -translate-y-full hover:z-50 focus-within:z-50"

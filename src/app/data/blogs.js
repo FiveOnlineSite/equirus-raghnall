@@ -2,7 +2,7 @@ export const blogs = [
   {
     slug: "why-every-growing-business-needs-insurance",
     title: "Why Every Growing Business Needs Insurance",
-    image: "/assets/blog-growing-business.png",
+    image: "/assets/blogs/blog-growing-business.png",
     category: "Business Insurance",
     excerpt: "Growth brings opportunity, but it also creates new exposures. The right insurance programme protects a business as its people, assets, and responsibilities expand.",
     sections: [
@@ -14,7 +14,7 @@ export const blogs = [
   {
     slug: "building-better-employee-benefits-programs",
     title: "Building Better Employee Benefits Programs",
-    image: "/assets/blog-employee-benefits.png",
+    image: "/assets/blogs/blog-employee-benefits.png",
     category: "Employee Benefits",
     excerpt: "A thoughtful benefits programme supports employee wellbeing while helping organisations attract and retain the people who drive their success.",
     sections: [
@@ -26,7 +26,7 @@ export const blogs = [
   {
     slug: "building-resilience-before-risks-become-reality",
     title: "Building Resilience Before Risks Become Reality",
-    image: "/assets/blog-resilience.png",
+    image: "/assets/blogs/blog-resilience.png",
     category: "Risk Management",
     excerpt: "Resilience starts before disruption. Understanding likely risks and planning for them early gives organisations the confidence to respond and recover.",
     sections: [
@@ -38,7 +38,7 @@ export const blogs = [
   {
     slug: "insurance-mistakes-that-cost-businesses-millions",
     title: "Insurance Mistakes That Cost Businesses Millions",
-    image: "/assets/blog-insurance-mistakes.png",
+    image: "/assets/blogs/blog-insurance-mistakes.png",
     category: "Insurance Guidance",
     excerpt: "Small gaps in disclosure, valuation, or policy structure can become expensive at claim time. Regular expert review helps keep protection aligned with reality.",
     sections: [
@@ -50,7 +50,7 @@ export const blogs = [
   {
     slug: "why-smart-businesses-review-coverage-annually",
     title: "Why Smart Businesses Review Coverage Annually",
-    image: "/assets/blog-coverage-review.png",
+    image: "/assets/blogs/blog-coverage-review.png",
     category: "Policy Review",
     excerpt: "Businesses rarely stand still. An annual coverage review makes sure insurance reflects new assets, contracts, locations, people, and emerging risks.",
     sections: [
@@ -62,7 +62,7 @@ export const blogs = [
   {
     slug: "why-risk-management-deserves-board-attention",
     title: "Why Risk Management Deserves Board Attention",
-    image: "/assets/blog-risk-management.png",
+    image: "/assets/blogs/blog-risk-management.png",
     category: "Corporate Governance",
     excerpt: "Risk decisions influence strategy, reputation, and financial performance. Board-level oversight turns risk management into a source of long-term resilience.",
     sections: [
@@ -74,7 +74,7 @@ export const blogs = [
   {
     slug: "the-hidden-cost-of-being-underinsured",
     title: "The Hidden Cost of Being Underinsured",
-    image: "/assets/blog-underinsured.png",
+    image: "/assets/blogs/blog-underinsured.png",
     category: "Coverage Strategy",
     excerpt: "Underinsurance can leave a company funding a large share of its own recovery. Accurate valuations and suitable limits are essential to dependable protection.",
     sections: [
@@ -86,7 +86,7 @@ export const blogs = [
   {
     slug: "getting-to-know-todays-insurance-scene",
     title: "Getting to Know Today's Insurance Scene",
-    image: "/assets/blog-insurance-scene.png",
+    image: "/assets/blogs/blog-insurance-scene.png",
     category: "Market Insights",
     excerpt: "Insurance is changing alongside technology, regulation, climate, and customer expectations. Understanding the market helps businesses make better risk decisions.",
     sections: [

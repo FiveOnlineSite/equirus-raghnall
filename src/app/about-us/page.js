@@ -83,7 +83,7 @@ export default function AboutUsPage() {
                   <div className="flex -space-x-2" aria-hidden="true">
                     {expertFaces.map((position) => (
                       <span className="relative block size-7 overflow-hidden rounded-full border-2 border-white" key={position}>
-                        <Image src="/assets/home-hero.png" alt="" fill sizes="28px" className="object-cover" style={{ objectPosition: position }} />
+                        <Image src="/assets/about/team-placeholder.png" alt="" fill sizes="28px" className="object-cover" style={{ objectPosition: position }} />
                       </span>
                     ))}
                   </div>
@@ -192,7 +192,7 @@ export default function AboutUsPage() {
               {directors.map((director) => (
                 <article key={director.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
                   <Image
-                    src="/assets/home-hero.png"
+                    src="/assets/about/team-placeholder.png"
                     alt={director.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -220,7 +220,7 @@ export default function AboutUsPage() {
               {managementTeam.map((member, index) => (
                 <article key={`${member.name}-${index}`} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
                   <Image
-                    src="/assets/home-hero.png"
+                    src="/assets/about/team-placeholder.png"
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -248,7 +248,7 @@ export default function AboutUsPage() {
               {reinsuranceTeam.map((member) => (
                 <article key={member.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
                   <Image
-                    src="/assets/home-hero.png"
+                    src="/assets/about/team-placeholder.png"
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -277,7 +277,7 @@ export default function AboutUsPage() {
               {awards.map((award) => (
                 <article key={award.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
                   <Image
-                    src="/assets/home-hero.png"
+                    src="/assets/about/team-placeholder.png"
                     alt={award.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
