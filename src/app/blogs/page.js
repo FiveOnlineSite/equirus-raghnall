@@ -12,7 +12,7 @@ export default function BlogsPage() {
     <><Navbar />
       <main>
         <section className="relative h-[364px] overflow-hidden text-white">
-          <Image src="/assets/blogs/blogs-hero.png" alt="Blue sky and clouds" fill priority className="object-cover object-[center_20%]" sizes="100vw" />
+          <Image src="/assets/blogs/blogs-hero.png" alt="Blue sky and clouds" fill priority className="object-cover object-[center_10%]" sizes="100vw" />
           <div className="relative mx-auto max-w-[1440px] px-5 pt-[60px] md:px-10 xl:px-20">
             <p className="text-sm font-medium uppercase leading-6 tracking-[0.03em] md:text-base md:leading-[30px]">Latest Updates</p>
             <h1 className="mt-4 text-[26px] font-semibold leading-9 md:text-[32px] md:leading-[44px]">NEWS &amp; INSIGHTS</h1>

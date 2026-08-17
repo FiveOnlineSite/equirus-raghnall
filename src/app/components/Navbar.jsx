@@ -50,6 +50,7 @@ export default function Navbar() {
               <div className="group/private flex h-full items-center" key={item.label}>
                 <Link
                   href={item.href}
+                  onClick={(event) => event.preventDefault()}
                   className="flex h-9 min-w-[135px] items-center justify-center gap-2 text-base leading-[30px] text-[#3d3d3d] transition-colors hover:text-[#0a4e08] group-focus-within/private:text-[#0a4e08]"
                   aria-haspopup="true"
                 >
@@ -92,6 +93,7 @@ export default function Navbar() {
               <div className="group/commercial flex h-full items-center" key={item.label}>
                 <Link
                   href={item.href}
+                  onClick={(event) => event.preventDefault()}
                   className="flex h-9 min-w-[135px] items-center justify-center gap-2 text-base leading-[30px] text-[#3d3d3d] transition-colors hover:text-[#0a4e08] group-focus-within/commercial:text-[#0a4e08]"
                   aria-haspopup="true"
                 >
@@ -136,6 +138,7 @@ export default function Navbar() {
               <div className="group/reinsurance flex h-full items-center" key={item.label}>
                 <Link
                   href={item.href}
+                  onClick={(event) => event.preventDefault()}
                   className="flex h-9 min-w-[135px] items-center justify-center gap-2 text-base leading-[30px] text-[#3d3d3d] transition-colors hover:text-[#0a4e08] group-focus-within/reinsurance:text-[#0a4e08]"
                   aria-haspopup="true"
                 >
