@@ -23,7 +23,7 @@ export default function SectionRevealManager() {
               observer.unobserve(entry.target);
             });
           },
-          { rootMargin: "0px 0px -8%", threshold: 0.01 },
+          { rootMargin: "0px 0px -12%", threshold: 0.01 },
         );
 
     function registerSections() {

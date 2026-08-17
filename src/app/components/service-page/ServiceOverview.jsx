@@ -48,7 +48,7 @@ export default function ServiceOverview({
         {example ? (
           <div className="mt-9">
             <div className="flex items-center gap-3">
-               <Image src="/assets/services/directors-officers/example.svg" alt="" width={22} height={22} className="mt-1 w-[22px] shrink-0" aria-hidden />
+              <Image src="/assets/services/directors-officers/example.svg" alt="" width={22} height={28} className="mt-1 h-auto w-[22px] shrink-0" aria-hidden />
               <h3 className="text-xl font-semibold text-[#242424]">{exampleTitle}</h3>
             </div>
             <p className="mt-3 pl-9 text-sm leading-7 text-[#555555] md:text-base">{example}</p>
