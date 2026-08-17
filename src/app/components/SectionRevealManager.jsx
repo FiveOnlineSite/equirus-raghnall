@@ -23,13 +23,18 @@ export default function SectionRevealManager() {
               observer.unobserve(entry.target);
             });
           },
-          { rootMargin: "0px 0px -8%", threshold: 0.12 },
+          { rootMargin: "0px 0px -8%", threshold: 0.01 },
         );
 
     function registerSections() {
-      main.querySelectorAll("section").forEach((section) => {
+      const revealTargets = [
+        ...main.querySelectorAll("section:not(footer section)"),
+        ...document.querySelectorAll("footer"),
+      ];
+
+      revealTargets.forEach((section) => {
         if (
-          section.parentElement?.closest("section") ||
+          (section.tagName === "SECTION" && section.parentElement?.closest("section")) ||
           registeredSections.has(section) ||
           section.hasAttribute("data-no-reveal")
         ) return;

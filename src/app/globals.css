@@ -27,18 +27,18 @@ button {
   bottom: 0 !important;
 }
 
-section[data-reveal="pending"] {
+:is(section, footer)[data-reveal="pending"] {
   opacity: 0;
   transform: translateY(32px);
 }
 
-section[data-reveal] {
+:is(section, footer)[data-reveal] {
   transition:
     opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-section[data-reveal="visible"] {
+:is(section, footer)[data-reveal="visible"] {
   opacity: 1;
   transform: translateY(0);
 }
@@ -129,7 +129,7 @@ section[data-reveal="visible"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  section[data-reveal] {
+  :is(section, footer)[data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
