@@ -22,8 +22,25 @@ a,
 button {
   outline-offset: 4px;
 }
+
 .testimonials-swiper .swiper-pagination {
   bottom: 0 !important;
+}
+
+section[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+section[data-reveal] {
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+section[data-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonials-swiper .swiper-pagination-bullet {
@@ -112,6 +129,12 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  section[data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .home-hero-palm,
   .home-hero-globe {
     opacity: 1;

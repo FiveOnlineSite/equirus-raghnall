@@ -435,12 +435,12 @@ export default function Home() {
 
             {[
               {
-                image: "/assets/blogs/blog-risk-management.png",
+                image: "/assets/blogs/blog1.png",
                 title:
                   "Understanding D&O Liability in India's Evolving Corporate Governance Landscape",
               },
               {
-                image: "/assets/home/insight-mistakes.png",
+                image: "/assets/blogs/blog2.png",
                 title:
                   "Cyber Insurance in India: Why every business needs it in 2026",
               },

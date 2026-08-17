@@ -74,7 +74,7 @@ export default function Page() {
           ]}
         />
         <ServiceCta
-          title="Ready To Explore Warranty & Indemnity (W & I)?"
+          title={<><span>Ready To Explore Warranty &amp; Indemnity</span><br /> <span>(W &amp; I)?</span></>}
           description="Speak with a specialist for a no-obligation assessment."
           primaryAction={{ label: "Get a Free Quote", href: "/contact-us" }}
           secondaryAction={{

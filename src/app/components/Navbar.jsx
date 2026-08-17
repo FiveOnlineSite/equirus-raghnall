@@ -241,30 +241,28 @@ export default function Navbar() {
 
               return (
                 <div className="border-b border-black/5" key={item.label}>
-                  <div className="flex min-h-12 items-center">
-                    <Link href={item.href} onClick={closeMobileMenu} className="flex min-h-12 flex-1 items-center text-[#3d3d3d]">
+                  <button
+                    type="button"
+                    className="flex min-h-12 w-full items-center justify-between text-left text-[#3d3d3d]"
+                    aria-controls={`mobile-services-${item.label.toLowerCase().replaceAll(" ", "-")}`}
+                    aria-expanded={isExpanded}
+                    onClick={() => setExpandedMobileMenu(isExpanded ? null : item.label)}
+                  >
+                    <span>
                       {item.label}
-                    </Link>
-                    <button
-                      type="button"
-                      className="grid size-12 shrink-0 place-items-center"
-                      aria-label={`${isExpanded ? "Collapse" : "Expand"} ${item.label} services`}
-                      aria-expanded={isExpanded}
-                      onClick={() => setExpandedMobileMenu(isExpanded ? null : item.label)}
-                    >
-                      <Image
-                        src="/assets/shared/chevron-down.svg"
-                        alt=""
-                        width={20}
-                        height={20}
-                        className={`transition-transform ${isExpanded ? "rotate-180" : ""}`}
-                        aria-hidden
-                      />
-                    </button>
-                  </div>
+                    </span>
+                    <Image
+                      src="/assets/shared/chevron-down.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                      className={`mr-3 size-5 shrink-0 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                      aria-hidden
+                    />
+                  </button>
 
                   {isExpanded && (
-                    <div className="space-y-5 pb-5 pl-4 pr-2 pt-2">
+                    <div id={`mobile-services-${item.label.toLowerCase().replaceAll(" ", "-")}`} className="space-y-5 pb-5 pl-4 pr-2 pt-2">
                       {serviceGroups.map((section) =>
                         section.links.length ? (
                           <div key={section.title}>
