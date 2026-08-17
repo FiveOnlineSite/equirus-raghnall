@@ -43,6 +43,10 @@ button {
   transform: translateY(0);
 }
 
+footer[data-reveal] {
+  transform: none;
+}
+
 .testimonials-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
