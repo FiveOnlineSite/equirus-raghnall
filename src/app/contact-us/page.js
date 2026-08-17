@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { commercialMenu } from "../data/commercialServices";
+import { privateClientsMenu } from "../data/privateClientServices";
+import { reinsuranceMenu } from "../data/reinsuranceServices";
+import ContactForm from "./ContactForm";
 import OfficePresenceMap from "./OfficePresenceMap";
 
 export const metadata = {
@@ -35,13 +39,17 @@ function ContactItem({ icon, title, children }) {
   );
 }
 
-const inputClass = "mt-2 h-12 w-full rounded-sm border-0 bg-[#f7f7f7] px-4 text-sm outline-none ring-[#0A4E08] transition focus:ring-1";
+const contactServiceGroups = [
+  ...privateClientsMenu.map((section) => ({ ...section, segment: "Private Clients" })),
+  ...commercialMenu.map((section) => ({ ...section, segment: "Commercial" })),
+  { title: "Transactional Risk", segment: "Reinsurance", links: reinsuranceMenu },
+].filter((section) => section.links.length > 0);
 
 export default function ContactUsPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-white">
+      <main className="overflow-x-clip bg-white">
         <section className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 lg:py-20 xl:px-20">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4E08]">Contact Us</p>
           <div className="mt-7 grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
@@ -57,18 +65,7 @@ export default function ContactUsPage() {
               </div>
             </div>
 
-            <form className="rounded-xl bg-white p-6 shadow-[0_2px_18px_rgba(0,0,0,0.12)] md:p-8" action="#">
-              <div className="grid gap-x-6 gap-y-5 md:grid-cols-2">
-                <label className="text-sm font-medium">First Name<input className={inputClass} name="firstName" /></label>
-                <label className="text-sm font-medium">Last Name<input className={inputClass} name="lastName" /></label>
-                <label className="text-sm font-medium">Phone<span className="text-red-600">*</span><input className={inputClass} name="phone" type="tel" required /></label>
-                <label className="text-sm font-medium">Email<span className="text-red-600">*</span><input className={inputClass} name="email" type="email" required /></label>
-                <label className="text-sm font-medium">Organization<input className={inputClass} name="organization" /></label>
-                <label className="text-sm font-medium">What services you are interested in?<span className="text-red-600">*</span><select className={inputClass} name="service" defaultValue="Private Car Insurance" required><option>Private Car Insurance</option><option>Commercial Insurance</option><option>Group Insurance</option><option>Reinsurance</option></select></label>
-                <label className="text-sm font-medium md:col-span-2">Write your message<textarea className="mt-2 min-h-32 w-full resize-y rounded-sm border-0 bg-[#f7f7f7] p-4 text-sm outline-none ring-[#0A4E08] focus:ring-1" name="message" /></label>
-              </div>
-              <button type="submit" className="mt-8 h-12 min-w-44 rounded-md bg-[#0A4E08] px-8 font-semibold text-white transition hover:opacity-90">Submit</button>
-            </form>
+            <ContactForm serviceGroups={contactServiceGroups} />
           </div>
         </section>
 
@@ -106,7 +103,7 @@ export default function ContactUsPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-5 pb-24 pt-4 text-center md:px-10 md:pb-32 xl:px-20">
+        <section className="mx-auto max-w-[1440px] px-5 pb-8 pt-4 text-center md:px-10 md:pb-20 xl:px-20">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4E08]">Our Presence</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Across India, Always Within Reach</h2>
           <OfficePresenceMap />

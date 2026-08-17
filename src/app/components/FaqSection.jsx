@@ -8,11 +8,12 @@ export default function FaqSection({
   title,
   items,
   defaultOpen = 0,
+  compactTop = false,
 }) {
   const [openIndex, setOpenIndex] = useState(defaultOpen);
 
   return (
-    <section className="bg-[#F8F9FF] py-16 md:py-20">
+    <section className={`bg-[#F8F9FF] pb-16 md:pb-20 ${compactTop ? "pt-8 md:pt-12" : "pt-16 md:pt-20"}`}>
       <div className="mx-auto grid max-w-[1440px] gap-10 px-5 md:px-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20 xl:px-20">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">{eyebrow}</p>

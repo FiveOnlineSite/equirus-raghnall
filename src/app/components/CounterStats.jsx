@@ -9,55 +9,65 @@ const stats = [
   { value: 300, suffix: "+", label: "Insurance Professionals" },
 ];
 
-function Counter({ value, suffix }) {
+function Counter({ value, suffix, active }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
 
   useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
+    if (!active) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(value);
+      return;
+    }
+
+    const duration = 1500;
+    const start = performance.now();
+    let animationFrame;
+    const animate = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(value * eased));
+      if (progress < 1) animationFrame = requestAnimationFrame(animate);
+    };
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [active, value]);
+
+  return <strong className="text-3xl font-semibold tabular-nums md:text-[34px]">{count}{suffix}</strong>;
+}
+
+export default function CounterStats() {
+  const [active, setActive] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
+        setActive(true);
         observer.disconnect();
-
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          setCount(value);
-          return;
-        }
-
-        const duration = 1500;
-        const start = performance.now();
-        const animate = (now) => {
-          const progress = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          setCount(Math.round(value * eased));
-          if (progress < 1) requestAnimationFrame(animate);
-        };
-        requestAnimationFrame(animate);
       },
-      { threshold: 0.35 },
+      { threshold: 1 },
     );
 
-    observer.observe(node);
+    observer.observe(section);
     return () => observer.disconnect();
-  }, [value]);
+  }, []);
 
-  return <strong ref={ref} className="text-3xl font-semibold tabular-nums md:text-[34px]">{count}{suffix}</strong>;
-}
-
-export default function CounterStats() {
   return (
-    <div className="bg-[#30337A] text-white">
+    <section ref={sectionRef} className="bg-[#30337A] text-white" aria-label="Company statistics">
       <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-y-10 px-5 py-10 text-center md:px-10 lg:grid-cols-4 lg:py-11 xl:px-20">
         {stats.map((stat) => (
           <div key={stat.label}>
-            <Counter value={stat.value} suffix={stat.suffix} />
+            <Counter value={stat.value} suffix={stat.suffix} active={active} />
             <p className="mt-4 text-sm font-medium md:text-base">{stat.label}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

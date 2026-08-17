@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = ["Group Insurance", "Commercial Insurance", "Individual Insurance", "Claim Advocacy"];
-const links = ["About Us", "Contact Us", "Insights", "Career"];
+const links = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Insights", href: "/blogs" },
+  { label: "Career", href: "/career" },
+];
 const legalLinks = ["Privacy Policy", "Terms & Conditions", "Code Of Conduct", "Grievance Redressal Policy"];
 
 function FooterLinkList({ title, items }) {
-  return <section><h2 className="mb-[18px] font-bold leading-7">{title}</h2><ul className="space-y-3 text-sm leading-6">{items.map((item) => <li key={item}><Link href={item === "Insights" ? "/blogs" : "#"} className="hover:underline">{item}</Link></li>)}</ul></section>;
+  return <section><h2 className="mb-[18px] font-bold leading-7">{title}</h2><ul className="space-y-3 text-sm leading-6">{items.map((item) => { const label = typeof item === "string" ? item : item.label; const href = typeof item === "string" ? "#" : item.href; return <li key={label}><Link href={href} className="hover:underline">{label}</Link></li>; })}</ul></section>;
 }
 
 function ContactRow({ icon, children }) {

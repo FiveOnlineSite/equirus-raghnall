@@ -36,7 +36,7 @@ export default function ServiceHero({
             {features.map((feature) => (
               <div className="flex items-center justify-center gap-4 sm:justify-start" key={feature.title}>
                 {feature.icon ? (
-                  <Image src={feature.icon} alt="" width={30} height={30} className="size-[30px] shrink-0 object-contain" aria-hidden />
+                  <Image src={feature.icon} alt="" width={30} height={30} className="size-6 shrink-0 object-contain sm:size-[30px]" aria-hidden />
                 ) : null}
                 <p className="max-w-[160px] text-base font-medium leading-6 text-[#242424]">{feature.title}</p>
               </div>

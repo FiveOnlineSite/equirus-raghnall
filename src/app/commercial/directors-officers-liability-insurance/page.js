@@ -62,15 +62,15 @@ export default function DirectorsOfficersLiabilityPage() {
           features={[
             {
               title: "Personal Asset Protection",
-              icon: "/assets/services/directors-officers/personal-assets.svg",
+              icon: "/assets/services/directors-officers/personal.svg",
             },
             {
               title: "Legal Defence Covered",
-              icon: "/assets/services/directors-officers/legal-defence.svg",
+              icon: "/assets/services/directors-officers/legal.svg",
             },
             {
               title: "Management Risk Protection",
-              icon: "/assets/services/directors-officers/management-risk.svg",
+              icon: "/assets/services/directors-officers/management.svg",
             },
           ]}
         />

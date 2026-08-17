@@ -8,46 +8,47 @@ export const metadata = {
   description: "More than insurance—a partner in every decision.",
 };
 
-const expertFaces = ["14% center", "48% center", "82% center"];
+const expertFaces = [
+  "/assets/about/expert-avatar-1.png",
+  "/assets/about/expert-avatar-2.png",
+  "/assets/about/expert-avatar-3.png",
+];
 
 const directors = [
-  { name: "Amit Goel", role: "Co-founder Director & Principal Officer", position: "8% center" },
-  { name: "Arun Garg", role: "Director", position: "36% center" },
-  { name: "Yognesh Dosshi", role: "Co-founder & Director", position: "64% center" },
-  { name: "Bhavesh A Shah", role: "Managing Director & Head-Investment Banking, Equirus Capital", position: "92% center" },
+  { name: "Amit Goel", role: "Co-founder Director & Principal Officer", image: "/assets/about/board-amit-goel.png", position: "center top" },
+  { name: "Yognesh Dosshi", role: "Co-founder & Director", image: "/assets/about/board-yognesh-dosshi.png", position: "center" },
+  { name: "Arun Garg", role: "Director", image: "/assets/about/board-arun-garg.png", position: "center top" },
+  { name: "Bhavesh A Shah", role: "Managing Director", image: "/assets/about/management-pritam.png", position: "center bottom" },
 ];
 
 const managementTeam = [
-  { name: "Amit Goel", role: "Principal Officer", position: "8% center" },
-  { name: "Yognesh Dosshi", role: "Director", position: "20% center" },
-  { name: "Arun Garg", role: "Director", position: "32% center" },
-  { name: "Bhavesh A Shah", role: "Managing Director", position: "44% center" },
-  { name: "Dinesh Shelar", role: "Regional Head", position: "56% center" },
-  { name: "Prasad Vattimilli", role: "Regional Head", position: "68% center" },
-  { name: "Susheel Kumar Sahani", role: "Regional Head", position: "80% center" },
-  { name: "Mahesh Kumar", role: "Regional Head", position: "92% center" },
-  { name: "Rushikesh Gade", role: "Business Leader", position: "12% center" },
-  { name: "Ashutosh Kedia", role: "Business Leader", position: "26% center" },
-  { name: "Govind Singh", role: "Business Leader", position: "40% center" },
-  { name: "Ayesha Shankar", role: "Human Resources", position: "54% center" },
-  { name: "Kashish Shah", role: "Insurance Advisory", position: "66% center" },
-  { name: "Ritik Jaiswal", role: "Risk Advisory", position: "76% center" },
-  { name: "Mohan Singh", role: "Claims Advocacy", position: "86% center" },
-  { name: "Leadership Team", role: "Corporate Insurance", position: "96% center" },
+  { name: "Esha Bajaj", role: "President – Operations", image: "/assets/about/management-esha-bajaj.png", position: "center" },
+  { name: "Prashant Mirchandani", role: "President – Corporate Solution", description: "Prashant Mirchandani | LLB, FIII\n18+ years in commercial insurance, insurance law & complex claims. Former National Head – TATA AIG. Expert in liability & commercial lines, high-value claim advisory, and strategic negotiation across industries.", image: "/assets/about/management-prashant-mirchandani.png", position: "center top" },
+  { name: "Zubin Dadhich", role: "VP – Corporate Solutions", image: "/assets/about/management-zubin-dadhich.png", position: "center top" },
+  { name: "Pritam Barkataki", role: "President – Business Development", image: "/assets/about/management-pritam.png", position: "center bottom" },
+  { name: "Rakesh Thakur", role: "VP – Corporate Solutions", image: "/assets/about/management-corporate-solutions.png", position: "center" },
+  { name: "Visheshank Shukla", role: "Sr. VP – Corporate Solutions", image: "/assets/about/management-prashant-mirchandani.png", position: "center top" },
+  { name: "Dr. Vrushank Shah", role: "National Head", image: "/assets/about/management-sonu-gupta.png", position: "center top" },
+  { name: "Charlotte Fernandes", role: "VP – Placement & Servicing", image: "/assets/about/management-charlotte-fernandes.png", position: "center bottom" },
+  { name: "Sonu Kumar Gupta", role: "VP – Non EB Claims", image: "/assets/about/management-sonu-gupta.png", position: "center top" },
+  { name: "Vinay Rai", role: "Sr. VP – Techno Marketing", image: "/assets/about/management-corporate-solutions.png", position: "center" },
+  { name: "Rohan Purohit", role: "VP – Corporate Solutions", image: "/assets/about/management-prashant-mirchandani.png", position: "center top" },
+  { name: "Amrit Pal Singh", role: "VP – Corporate Solutions", image: "/assets/about/management-sonu-gupta.png", position: "center top" },
+  { name: "Gaurav Palliwal", role: "Business Head – Retail", image: "/assets/about/management-pritam.png", position: "center bottom" },
+  { name: "Aman Gour", role: "National Head – Risk Engineering", image: "/assets/about/management-prashant-mirchandani.png", position: "center top" },
+  { name: "M. Javed Ansari", role: "Compliance Officer", image: "/assets/about/management-corporate-solutions.png", position: "center" },
 ];
 
 const reinsuranceTeam = [
-  { name: "Reinsurance Leader", role: "Head of Reinsurance", position: "18% center" },
-  { name: "Treaty Specialist", role: "Treaty Reinsurance", position: "42% center" },
-  { name: "Facultative Specialist", role: "Facultative Reinsurance", position: "68% center" },
-  { name: "Global Markets Lead", role: "International Markets", position: "90% center" },
+  { name: "Abhyudaya Das", role: "Partner & CBO – Reinsurance", image: "/assets/about/reinsurance-abhyudaya-das.png", position: "center" },
+  { name: "Varun Vashishth", role: "Partner & COO – Reinsurance", image: "/assets/about/reinsurance-varun-vashishth.png", position: "center top" },
 ];
 
 const awards = [
-  { name: "Excellence in Insurance Broking", role: "Industry Recognition", position: "12% center" },
-  { name: "Trusted Risk Advisory", role: "Client Excellence", position: "38% center" },
-  { name: "Claims Advocacy Excellence", role: "Service Recognition", position: "66% center" },
-  { name: "Leadership in Reinsurance", role: "Market Recognition", position: "90% center" },
+  { name: "Excellence in Insurance Advisory", organizer: "Organizer", image: "/assets/about/award-insurance-advisory.png", position: "center top" },
+  { name: "Trusted Insurance Partner Award", organizer: "Organizer", image: "/assets/about/award-trusted-partner.png", position: "center" },
+  { name: "Industry Leadership Recognition", organizer: "Organizer", image: "/assets/about/award-industry-leadership.png", position: "center top" },
+  { name: "Innovation in Insurance Solutions", organizer: "Organizer", image: "/assets/about/award-innovation.png", position: "center top" },
 ];
 
 export default function AboutUsPage() {
@@ -71,19 +72,17 @@ export default function AboutUsPage() {
             </div>
 
             <div className="mx-auto mt-14 grid max-w-[1290px] items-center gap-5 md:mt-16 md:grid-cols-3">
-              <div className="relative aspect-[1.5/1] overflow-hidden rounded-lg shadow-[0_5px_20px_rgba(0,0,0,0.08)]">
-                <Image src="/assets/about/about-philosophy.png" alt="A family enjoying time together" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              <div className="relative aspect-[413/273] overflow-hidden rounded-lg shadow-[0_1px_16px_rgba(0,0,0,0.1)]">
+                <Image src="/assets/about/about-hero-family.png" alt="A family enjoying time together" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
 
-              <div className="relative aspect-[1.5/1] overflow-visible rounded-lg shadow-[0_5px_20px_rgba(0,0,0,0.1)] md:mt-16">
-                <div className="absolute inset-0 overflow-hidden rounded-lg">
-                  <Image src="/assets/about/about-values.png" alt="Insurance experts collaborating" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                </div>
-                <div className="absolute bottom-3 left-3 flex items-center rounded-full bg-white py-1.5 pl-2 pr-3 shadow-md">
+              <div className="relative aspect-[414/285] overflow-hidden rounded-lg shadow-[0_1px_16px_rgba(0,0,0,0.1)] md:mt-16">
+                <Image src="/assets/about/about-hero-collaboration.png" alt="Insurance experts collaborating" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <div className="absolute bottom-6 left-6 flex items-center rounded-full bg-white py-1.5 px-2 shadow-md">
                   <div className="flex -space-x-2" aria-hidden="true">
-                    {expertFaces.map((position) => (
-                      <span className="relative block size-7 overflow-hidden rounded-full border-2 border-white" key={position}>
-                        <Image src="/assets/about/team-placeholder.png" alt="" fill sizes="28px" className="object-cover" style={{ objectPosition: position }} />
+                    {expertFaces.map((image) => (
+                      <span className="relative block size-7 overflow-hidden rounded-full border-2 border-white" key={image}>
+                        <Image src={image} alt="" fill sizes="28px" className="object-cover" />
                       </span>
                     ))}
                   </div>
@@ -91,8 +90,8 @@ export default function AboutUsPage() {
                 </div>
               </div>
 
-              <div className="relative aspect-[1.5/1] overflow-hidden rounded-lg shadow-[0_5px_20px_rgba(0,0,0,0.08)]">
-                <Image src="/assets/about/about-story.png" alt="A modern collaborative workplace" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              <div className="relative aspect-[413/273] overflow-hidden rounded-lg shadow-[0_1px_16px_rgba(0,0,0,0.1)]">
+                <Image src="/assets/about/about-hero-office.png" alt="A modern collaborative workplace" fill priority sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
             </div>
           </div>
@@ -133,7 +132,7 @@ export default function AboutUsPage() {
             <div className="relative mx-auto w-full max-w-[560px] pb-2 pr-2">
               <span className="absolute bottom-0 left-[57%] right-0 top-[35%] rounded-[6px] bg-[#30337A]" aria-hidden="true" />
               <div className="relative aspect-[1.22/1] overflow-hidden rounded-[10px] bg-white">
-                <Image src="/assets/about/global-reach-generated.png" alt="A globe representing Equirus Raghnall's global insurance capabilities" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover object-center" />
+                <Image src="/assets/about/global-capabilities.png" alt="A globe representing Equirus Raghnall's global insurance capabilities" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -141,19 +140,19 @@ export default function AboutUsPage() {
 
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:px-20">
-            <div className="relative mx-auto w-full max-w-[560px] pb-2 pl-2">
-              <span className="absolute bottom-0 left-0 right-[57%] top-[35%] rounded-[6px] bg-[#30337A]" aria-hidden="true" />
-              <div className="relative aspect-[1.22/1] overflow-hidden rounded-[10px] bg-[#f1f1f1]">
-                <Image src="/assets/about/about-story.png" alt="Modern architecture representing a strong foundation" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover object-center" />
-              </div>
-            </div>
-
-            <div>
+            <div className="lg:order-2">
               <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">What Drives Us</p>
               <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">How We Measure Success</h2>
               <p className="mt-7 max-w-[700px] text-sm leading-7 text-[#555555] md:text-base">
                 At Equirus Raghnall, we measure our success by the confidence our clients place in us. We are committed to building enduring partnerships founded on integrity, technical excellence, responsiveness, and a relentless focus on delivering value. As trusted advisors to our clients, we help them anticipate risk, seize opportunities with confidence, and create resilient businesses prepared for the future.
               </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-[560px] pb-2 pl-2 lg:order-1">
+              <span className="absolute bottom-0 left-0 right-[57%] top-[35%] rounded-[6px] bg-[#30337A]" aria-hidden="true" />
+              <div className="relative aspect-[1.22/1] overflow-hidden rounded-[10px] bg-[#f1f1f1]">
+                <Image src="/assets/about/measure-success.png" alt="Modern architecture representing a strong foundation" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover object-center" />
+              </div>
             </div>
           </div>
         </section>
@@ -190,19 +189,19 @@ export default function AboutUsPage() {
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {directors.map((director) => (
-                <article key={director.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
+                <article key={director.name} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
-                    src="/assets/about/team-placeholder.png"
+                    src={director.image}
                     alt={director.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: director.position }}
                   />
-                  <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(0,0,0,0.78)_100%)]" aria-hidden="true" />
-                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                    <h3 className="text-base font-semibold">{director.name}</h3>
-                    <p className="mt-1 text-xs leading-5 text-white/90">{director.role}</p>
+                  <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
+                    <h3 className="text-base font-semibold leading-6">{director.name}</h3>
+                    <p className="mt-1 text-sm leading-5 text-white/95">{director.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{director.description ?? `${director.name} provides strategic leadership and expertise as ${director.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -218,19 +217,19 @@ export default function AboutUsPage() {
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {managementTeam.map((member, index) => (
-                <article key={`${member.name}-${index}`} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
+                <article key={`${member.name}-${index}`} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
-                    src="/assets/about/team-placeholder.png"
+                    src={member.image}
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: member.position }}
                   />
-                  <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(0,0,0,0.78)_100%)]" aria-hidden="true" />
-                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                    <h3 className="text-base font-semibold">{member.name}</h3>
-                    <p className="mt-1 text-xs leading-5 text-white/90">{member.role}</p>
+                  <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
+                    <h3 className="text-base font-semibold leading-6">{member.name}</h3>
+                    <p className="mt-1 text-sm leading-5 text-white/95">{member.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{member.description ?? `${member.name} brings specialist experience and leadership to the role of ${member.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -246,19 +245,19 @@ export default function AboutUsPage() {
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {reinsuranceTeam.map((member) => (
-                <article key={member.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
+                <article key={member.name} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
-                    src="/assets/about/team-placeholder.png"
+                    src={member.image}
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: member.position }}
                   />
-                  <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(0,0,0,0.78)_100%)]" aria-hidden="true" />
-                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                    <h3 className="text-base font-semibold">{member.name}</h3>
-                    <p className="mt-1 text-xs leading-5 text-white/90">{member.role}</p>
+                  <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
+                    <h3 className="text-base font-semibold leading-6">{member.name}</h3>
+                    <p className="mt-1 text-sm leading-5 text-white/95">{member.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{member.description ?? `${member.name} contributes deep market expertise and leadership as ${member.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -269,26 +268,25 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">AWARDS &amp; RECOGNITION</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Excellence in Client Service</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">Why Choose Us</p>
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Why Equirus Raghnall</h2>
             </div>
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {awards.map((award) => (
-                <article key={award.name} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db]">
-                  <Image
-                    src="/assets/about/team-placeholder.png"
-                    alt={award.name}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    style={{ objectPosition: award.position }}
-                  />
-                  <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(0,0,0,0.78)_100%)]" aria-hidden="true" />
-                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                    <h3 className="text-base font-semibold">{award.name}</h3>
-                    <p className="mt-1 text-xs leading-5 text-white/90">{award.role}</p>
+                <article key={award.name} className="text-center">
+                  <div className="group relative aspect-[305/312] overflow-hidden rounded-lg bg-[#d7d9db]">
+                    <Image
+                      src={award.image}
+                      alt={award.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      style={{ objectPosition: award.position }}
+                    />
                   </div>
+                  <h3 className="mx-auto mt-4 max-w-[271px] text-xl font-semibold leading-8 text-[#080808]">{award.name}</h3>
+                  <p className="mt-2 text-base leading-7 text-[#3d3d3d]">{award.organizer}</p>
                 </article>
               ))}
             </div>

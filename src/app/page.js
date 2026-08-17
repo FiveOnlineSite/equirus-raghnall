@@ -3,6 +3,7 @@ import Link from "next/link";
 import CounterStats from "./components/CounterStats";
 import Footer from "./components/Footer";
 import FaqSection from "./components/FaqSection";
+import HomeHeroVisual, { MobileHomeHeroVisual } from "./components/HomeHeroVisual";
 import Navbar from "./components/Navbar";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 
@@ -97,11 +98,31 @@ const heroProducts = [
 ];
 
 const homeFaqs = [
-  { question: "What types of insurance solutions do you offer?", answer: "We offer private client, commercial, employee benefit, and reinsurance solutions tailored to individual and business requirements." },
-  { question: "How do you help choose the right insurance plan?", answer: "We assess your specific needs, risk exposure, and long-term goals to recommend solutions that are structured, relevant, and not product-driven." },
-  { question: "Do you assist with claims as well?", answer: "Yes. Our claim advocacy team supports you throughout documentation, coordination, negotiation, and settlement." },
-  { question: "Can I customize my insurance coverage?", answer: "Yes. We design coverage around your risks and priorities, combining suitable policies and limits instead of relying on a one-size-fits-all package." },
-  { question: "How do I get Started?", answer: "Contact our advisory team to schedule an initial consultation. We will review your requirements and recommend the appropriate next steps." },
+  {
+    question: "What types of insurance solutions do you offer?",
+    answer:
+      "We offer private client, commercial, employee benefit, and reinsurance solutions tailored to individual and business requirements.",
+  },
+  {
+    question: "How do you help choose the right insurance plan?",
+    answer:
+      "We assess your specific needs, risk exposure, and long-term goals to recommend solutions that are structured, relevant, and not product-driven.",
+  },
+  {
+    question: "Do you assist with claims as well?",
+    answer:
+      "Yes. Our claim advocacy team supports you throughout documentation, coordination, negotiation, and settlement.",
+  },
+  {
+    question: "Can I customize my insurance coverage?",
+    answer:
+      "Yes. We design coverage around your risks and priorities, combining suitable policies and limits instead of relying on a one-size-fits-all package.",
+  },
+  {
+    question: "How do I get Started?",
+    answer:
+      "Contact our advisory team to schedule an initial consultation. We will review your requirements and recommend the appropriate next steps.",
+  },
 ];
 
 export default function Home() {
@@ -109,16 +130,15 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section className="min-h-[610px] bg-white">
-          <div className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 md:py-16 xl:px-20">
-            <div className="max-w-[600px]">
+        <section className="min-h-[570px] bg-white">
+          <div className="mx-auto grid min-h-[570px] max-w-[1440px] items-center gap-10 overflow-hidden px-5 pb-0 pt-10 md:px-10 md:pt-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-20">
+            <div className="min-w-0 max-w-[600px]">
               <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
-              <h1 className="mt-7 text-[42px] font-semibold leading-[1.08] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl md:text-[54px]">
-                Not Just Coverage
-                <br />
-                Complete Risk Strategy.
+              <h1 className="mt-7 text-[40px] font-semibold leading-[1.02] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl md:text-[52px]">
+                <span className="block">Not Just Coverage</span>
+                <span className="block lg:whitespace-nowrap">Complete Risk Strategy.</span>
               </h1>
               <p className="mt-8 max-w-[520px] text-base leading-7 text-[#555555]">
                 We partner with individuals, businesses, and institutions to
@@ -127,35 +147,44 @@ export default function Home() {
               </p>
               <Link
                 href="#services"
-                className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-sm font-semibold text-white transition hover:opacity-90"
+                className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-base font-semibold text-white transition hover:opacity-90"
               >
                 Visit Our Services
               </Link>
 
-              <div className="mt-16 flex items-center gap-5">
-                <div className="flex -space-x-3" aria-hidden="true">
-                  {["10% center", "36% center", "62% center", "88% center"].map(
-                    (position) => (
-                      <span
-                        key={position}
-                        className="relative block size-11 overflow-hidden rounded-full border border-[#8f8f8f] bg-white ring-2 ring-white"
-                      >
-                        <Image
-                          src="/assets/home/home-hero.png"
-                          alt=""
-                          fill
-                          sizes="44px"
-                          className="object-cover"
-                          style={{ objectPosition: position }}
-                        />
-                      </span>
-                    ),
-                  )}
+              <div className="mt-10 flex items-center gap-3 sm:gap-5">
+                <div className="relative h-10 w-[118px]" aria-hidden="true">
+                  {[
+                    { src: "/assets/home/trusted-avatar-1.png", left: 0 },
+                    { src: "/assets/home/trusted-avatar-2.png", left: 23 },
+                    { src: "/assets/home/trusted-avatar-3.png", left: 51 },
+                    { src: "/assets/home/trusted-avatar-4.png", left: 78 },
+                  ].map((avatar) => (
+                    <span
+                      key={avatar.src}
+                      className="absolute top-0 block size-10 overflow-hidden rounded-full"
+                      style={{ left: avatar.left }}
+                    >
+                      <Image
+                        src={avatar.src}
+                        alt=""
+                        fill
+                        sizes="40px"
+                        className="object-cover"
+                      />
+                    </span>
+                  ))}
                 </div>
-                <p className="text-sm font-medium text-[#242424]">
+                <p className="text-sm font-medium text-[#242424] sm:text-base">
                   Trusted by over 10M+ People
                 </p>
               </div>
+            </div>
+            <div className="flex min-w-0 justify-center lg:hidden">
+              <MobileHomeHeroVisual />
+            </div>
+            <div className="hidden min-w-0 self-end justify-end lg:flex">
+              <HomeHeroVisual />
             </div>
           </div>
         </section>
@@ -196,7 +225,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={service.href}
-                    className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+                    className="group mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]"
                   >
                     Know More
                     <Image
@@ -204,7 +233,7 @@ export default function Home() {
                       alt=""
                       width={20}
                       height={20}
-                      className="size-[20px]"
+                      className="size-[20px] transition-transform duration-300 group-hover:translate-x-1.5"
                       aria-hidden
                     />
                   </Link>
@@ -212,8 +241,9 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <CounterStats />
         </section>
+
+        <CounterStats />
 
         <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f8f9ff_100%)] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
@@ -236,14 +266,22 @@ export default function Home() {
                     <span className="rounded-sm bg-[#EBFFD666] px-2.5 py-1 text-xs font-medium uppercase text-[#0A4E08] transition-colors group-hover:text-white">
                       {service.category}
                     </span>
-                    <Image
-                      src="/assets/shared/arrow-right-up.svg"
-                      alt=""
-                      width={26}
-                      height={26}
-                      className="size-[26px]"
-                      aria-hidden
-                    />
+                    <span className="relative block size-[26px] shrink-0" aria-hidden="true">
+                      <Image
+                        src="/assets/shared/arrow-right-up.svg"
+                        alt=""
+                        fill
+                        sizes="26px"
+                        className="object-contain opacity-100 transition-opacity group-hover:opacity-0"
+                      />
+                      <Image
+                        src="/assets/shared/arrow-right-up-white.svg"
+                        alt=""
+                        fill
+                        sizes="26px"
+                        className="object-contain opacity-0 transition-opacity group-hover:opacity-100"
+                      />
+                    </span>
                   </div>
                   <div className="mt-auto pt-12">
                     <h3 className="text-xl font-semibold text-[#151515] transition-colors group-hover:text-white">
@@ -303,7 +341,7 @@ export default function Home() {
               />
               <div className="relative aspect-[1.2/1] overflow-hidden rounded-[6px] bg-white">
                 <Image
-                  src="/assets/home/home-why-us.png"
+                  src="/assets/home/why-us.png"
                   alt="Advisers discussing tailored insurance solutions"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"
@@ -352,7 +390,7 @@ export default function Home() {
                     </p>
                     <Link
                       href={product.href}
-                      className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+                      className="group mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]"
                     >
                       Explore
                       <Image
@@ -360,7 +398,7 @@ export default function Home() {
                         alt=""
                         width={20}
                         height={20}
-                        className="size-[20px]"
+                        className="size-[20px] transition-transform duration-300 group-hover:translate-x-1.5"
                         aria-hidden
                       />
                     </Link>
@@ -434,7 +472,11 @@ export default function Home() {
           </div>
         </section>
 
-        <FaqSection title="Answers to Common Insurance Queries" items={homeFaqs} />
+        <FaqSection
+          title="Answers to Common Insurance Queries"
+          items={homeFaqs}
+          compactTop
+        />
 
         <section className="bg-white py-14 md:py-16">
           <div className="mx-auto flex max-w-[1440px] flex-col items-start px-5 text-left md:px-10 xl:px-20">
@@ -445,16 +487,32 @@ export default function Home() {
               height={175}
               className="h-auto w-[175px] object-contain"
             />
-            <p className="mt-4 text-sm leading-7 text-[#555555]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse...
+            <p className="mt-2 text-sm leading-7 text-[#555555]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse...
             </p>
-            <Link href="/about-us" className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition hover:opacity-70">
+            <Link
+              href="/about-us"
+              className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+            >
               Read More
-              <Image src="/assets/shared/arrow-right.svg" alt="" width={18} height={18} className="size-[20px]" aria-hidden />
+              <Image
+                src="/assets/shared/arrow-right.svg"
+                alt=""
+                width={18}
+                height={18}
+                className="size-[20px]"
+                aria-hidden
+              />
             </Link>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

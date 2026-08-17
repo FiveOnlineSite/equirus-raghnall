@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RiArrowLeftSLine } from "react-icons/ri";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { blogs, getBlog } from "../../data/blogs";
@@ -33,15 +34,15 @@ export default async function BlogDetailsPage({ params }) {
             href="/blogs"
             className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[#0a4e08] transition-opacity hover:opacity-70"
           >
-            <span aria-hidden="true">←</span>
+            <RiArrowLeftSLine className="size-5" aria-hidden="true" />
             Back to Blogs
           </Link>
 
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[#151515]">
+          <h1 className="text-[28px] font-semibold leading-tight tracking-tight text-[#151515] md:text-4xl">
             {blog.title}
           </h1>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-[#4b4b4b]">
+          <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-[#4b4b4b] md:gap-3 md:text-sm">
             <time dateTime="2026-07-11">11 Jul 2026</time>
             {[blog.category, ...(blog.tags ?? [])].map((tag) => (
               <span
@@ -63,8 +64,8 @@ export default async function BlogDetailsPage({ params }) {
             className="mt-6 aspect-video w-full rounded-xl object-cover md:mt-8"
           />
 
-          <div className="mt-10 max-w-3xl md:mt-14">
-            <p className="text-xl font-medium leading-8 text-gray-500">
+          <div className="mt-10 w-full md:mt-14">
+            <p className="w-full text-base font-medium leading-7 text-gray-500 md:text-xl md:leading-8">
               {blog.excerpt}
             </p>
           </div>
