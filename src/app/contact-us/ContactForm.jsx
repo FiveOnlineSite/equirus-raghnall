@@ -51,11 +51,11 @@ export default function ContactForm({ serviceGroups }) {
   return (
     <form className="rounded-xl bg-white p-6 shadow-[0_2px_18px_rgba(0,0,0,0.12)] md:p-8" onSubmit={handleSubmit}>
       <div className="grid gap-x-6 gap-y-5 md:grid-cols-2">
-        <label className="text-sm font-medium">First Name<input className={inputClass} name="firstName" maxLength={80} /></label>
-        <label className="text-sm font-medium">Last Name<input className={inputClass} name="lastName" maxLength={80} /></label>
-        <label className="text-sm font-medium">Phone<span className="text-red-600">*</span><input className={inputClass} name="phone" type="tel" maxLength={30} required /></label>
+        <label className="text-sm font-medium">First Name<span className="text-red-600">*</span><input className={inputClass} name="firstName" maxLength={80} required /></label>
+        <label className="text-sm font-medium">Last Name<span className="text-red-600">*</span><input className={inputClass} name="lastName" maxLength={80} required /></label>
+        <label className="text-sm font-medium">Phone<span className="text-red-600">*</span><input className={inputClass} name="phone" type="tel" inputMode="numeric" pattern="[0-9]{10}" minLength={10} maxLength={10} title="Enter a 10-digit phone number" onInput={(event) => { event.currentTarget.value = event.currentTarget.value.replace(/\D/g, "").slice(0, 10); }} required /></label>
         <label className="text-sm font-medium">Email<span className="text-red-600">*</span><input className={inputClass} name="email" type="email" maxLength={254} required /></label>
-        <label className="text-sm font-medium">Organization<input className={inputClass} name="organization" maxLength={150} /></label>
+        <label className="text-sm font-medium">Organization<span className="text-red-600">*</span><input className={inputClass} name="organization" maxLength={150} required /></label>
         <label className="text-sm font-medium">
           What services you are interested in?<span className="text-red-600">*</span>
           <select className={inputClass} name="service" defaultValue="" required>
