@@ -11,7 +11,9 @@ const services = [
   ...reinsuranceMenu,
 ];
 
-const serviceNames = new Map(services.map((service) => [service.slug, service.label]));
+const serviceNames = new Map(
+  services.map((service) => [service.slug, service.label]),
+);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function clean(value, maxLength) {
@@ -19,13 +21,17 @@ function clean(value, maxLength) {
 }
 
 function escapeHtml(value) {
-  return value.replace(/[&<>'"]/g, (character) => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    "'": "&#39;",
-    '"': "&quot;",
-  })[character]);
+  return value.replace(
+    /[&<>'"]/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;",
+      })[character],
+  );
 }
 
 export async function POST(request) {
@@ -45,8 +51,17 @@ export async function POST(request) {
     const message = clean(body.message, 4000);
     const serviceName = serviceNames.get(service);
 
+    console.log("ENV CHECK", {
+      SMTP_EMAIL: !!smtpEmail,
+      SMTP_APP_PASSWORD: !!smtpAppPassword,
+      CONTACT_TO_EMAIL: !!process.env.CONTACT_TO_EMAIL,
+    });
+
     if (!phone || !emailPattern.test(email) || !serviceName) {
-      return Response.json({ message: "Please provide a valid phone, email, and service." }, { status: 400 });
+      return Response.json(
+        { message: "Please provide a valid phone, email, and service." },
+        { status: 400 },
+      );
     }
 
     const smtpEmail = process.env.SMTP_EMAIL;
@@ -55,7 +70,10 @@ export async function POST(request) {
 
     if (!smtpEmail || !smtpAppPassword || !recipientEmail) {
       console.error("Contact email environment variables are not configured.");
-      return Response.json({ message: "Email service is not configured yet." }, { status: 503 });
+      return Response.json(
+        { message: "Email service is not configured yet." },
+        { status: 503 },
+      );
     }
 
     const transporter = nodemailer.createTransport({
@@ -70,7 +88,10 @@ export async function POST(request) {
       email: escapeHtml(email),
       organization: escapeHtml(organization || "Not provided"),
       serviceName: escapeHtml(serviceName),
-      message: escapeHtml(message || "No message provided").replace(/\n/g, "<br />"),
+      message: escapeHtml(message || "No message provided").replace(
+        /\n/g,
+        "<br />",
+      ),
     };
 
     await transporter.sendMail({
@@ -85,6 +106,9 @@ export async function POST(request) {
     return Response.json({ ok: true });
   } catch (error) {
     console.error("Failed to send contact email:", error);
-    return Response.json({ message: "Unable to send your message. Please try again." }, { status: 500 });
+    return Response.json(
+      { message: "Unable to send your message. Please try again." },
+      { status: 500 },
+    );
   }
 }
