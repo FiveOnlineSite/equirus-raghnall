@@ -51,12 +51,6 @@ export async function POST(request) {
     const message = clean(body.message, 4000);
     const serviceName = serviceNames.get(service);
 
-    console.log("ENV CHECK", {
-      SMTP_EMAIL: !!smtpEmail,
-      SMTP_APP_PASSWORD: !!smtpAppPassword,
-      CONTACT_TO_EMAIL: !!process.env.CONTACT_TO_EMAIL,
-    });
-
     if (!phone || !emailPattern.test(email) || !serviceName) {
       return Response.json(
         { message: "Please provide a valid phone, email, and service." },
@@ -67,6 +61,12 @@ export async function POST(request) {
     const smtpEmail = process.env.SMTP_EMAIL;
     const smtpAppPassword = process.env.SMTP_APP_PASSWORD;
     const recipientEmail = process.env.CONTACT_TO_EMAIL || smtpEmail;
+
+    console.log("ENV CHECK", {
+      SMTP_EMAIL: !!smtpEmail,
+      SMTP_APP_PASSWORD: !!smtpAppPassword,
+      CONTACT_TO_EMAIL: !!process.env.CONTACT_TO_EMAIL,
+    });
 
     if (!smtpEmail || !smtpAppPassword || !recipientEmail) {
       console.error("Contact email environment variables are not configured.");
