@@ -19,7 +19,7 @@ export default function ServiceCta({
             </Link>
           ) : null}
           {secondaryAction ? (
-            <Link href={secondaryAction.href} className="inline-flex h-12 min-w-[175px] items-center justify-center rounded-md border border-white bg-[#376E00] px-6 text-sm font-semibold text-white transition hover:bg-[#2f5e00]" download={secondaryAction.download || undefined}>
+            <Link href={secondaryAction.href} className="inline-flex h-12 min-w-[175px] items-center justify-center rounded-md border border-white  px-6 text-sm font-semibold text-white transition hover:bg-[#2f5e00]" download={secondaryAction.download || undefined}>
               {secondaryAction.label}
             </Link>
           ) : null}

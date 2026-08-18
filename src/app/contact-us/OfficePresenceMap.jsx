@@ -58,7 +58,7 @@ export default function OfficePresenceMap() {
               <button type="button" className="relative grid size-6 place-items-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#0A4E08] focus-visible:ring-offset-1 sm:size-8 md:size-12 md:focus-visible:ring-offset-2" aria-label={`View ${location.city} office details`}>
                 <Image src={pinAssets[location.color]} alt="" width={24} height={24} className="size-3 sm:size-4 md:size-6" aria-hidden />
               </button>
-              <div className={`pointer-events-none absolute top-0 z-[60] grid w-[min(260px,68vw)] [clip-path:inset(0_100%_100%_0)] grid-cols-[16px_1fr] gap-x-2 gap-y-1.5 rounded-md border-l-2 bg-[#FAFAFA] p-2 text-left opacity-0 shadow-[0_1px_12px_rgba(0,0,0,0.10)] transition-[clip-path,opacity] duration-500 ease-in-out md:left-0 md:right-auto md:w-[min(382px,88vw)] md:translate-x-0 md:grid-cols-[24px_1fr] md:gap-x-4 md:gap-y-3 md:rounded-lg md:p-3 md:shadow-[0_1px_16px_rgba(0,0,0,0.10)] group-hover:[clip-path:inset(0_0_0_0)] group-hover:opacity-100 group-focus-within:[clip-path:inset(0_0_0_0)] group-focus-within:opacity-100 ${location.x < 35 ? "left-0" : location.x > 65 ? "right-0" : "left-1/2 -translate-x-1/2"} ${detailBorderColors[location.color]}`}>
+              <div className={`pointer-events-none invisible absolute top-0 z-[60] grid w-[min(260px,68vw)] grid-cols-[16px_1fr] gap-x-2 gap-y-1.5 rounded-md border-l-2 bg-[#FAFAFA] p-2 text-left opacity-0 shadow-[0_1px_12px_rgba(0,0,0,0.10)] md:left-0 md:right-auto md:w-[min(382px,88vw)] md:translate-x-0 md:grid-cols-[24px_1fr] md:gap-x-4 md:gap-y-3 md:rounded-lg md:p-3 md:shadow-[0_1px_16px_rgba(0,0,0,0.10)] group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100 ${location.x < 35 ? "left-0" : location.x > 65 ? "right-0" : "left-1/2 -translate-x-1/2"} ${detailBorderColors[location.color]}`}>
                 <Image src={pinAssets[location.color]} alt="" width={24} height={24} className="size-4 md:size-6" aria-hidden />
                 <p className="text-[11px] font-medium leading-4 text-[#080808] md:text-sm md:leading-6">{location.address}</p>
                 <svg viewBox="0 0 24 24" className="mt-0.5 size-4 text-[#080808] md:size-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -67,7 +67,12 @@ export default function OfficePresenceMap() {
                 </svg>
                 <div>
                   <p className="text-[10px] font-medium leading-4 text-[#080808] md:text-xs md:leading-5">{location.contact}</p>
-                  <p className={`mt-0.5 break-all text-[10px] font-medium leading-4 md:mt-1 md:text-xs md:leading-5 ${detailAccentColors[location.color]}`}>{location.email}</p>
+                  <a
+                    href={`mailto:${location.email}`}
+                    className={`mt-0.5 block break-all text-[10px] font-medium leading-4 hover:underline md:mt-1 md:text-xs md:leading-5 ${detailAccentColors[location.color]}`}
+                  >
+                    {location.email}
+                  </a>
                 </div>
               </div>
             </div>

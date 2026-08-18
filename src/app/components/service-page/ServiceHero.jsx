@@ -26,7 +26,7 @@ export default function ServiceHero({
 
       <div className="mx-auto flex min-h-[560px] max-w-[1440px] flex-col px-5 pb-9 pt-14 text-center md:px-10 md:pt-16 xl:px-20">
         <div className="mx-auto max-w-[650px]">
-          <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
+          <p className="text-base font-medium uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
           <h1 className="mt-6 text-[40px] font-semibold leading-[1.08] tracking-[-0.025em] text-[#080808] md:text-[54px]">{title}</h1>
           <p className="mx-auto mt-7 max-w-[530px] text-sm leading-6 text-[#555555] md:text-base md:leading-7">{description}</p>
         </div>

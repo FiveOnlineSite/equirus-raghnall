@@ -13,7 +13,7 @@ export default function ServiceAdvisorySupport({
     <section className="bg-white py-16 md:py-20">
       <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:px-20">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
+          <p className="text-base font-medium uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.3] tracking-[-0.02em] text-[#111111] md:text-[40px]">{title}</h2>
           <p className="mt-6 max-w-[650px] text-sm leading-7 text-[#555555] md:text-base">{description}</p>
 

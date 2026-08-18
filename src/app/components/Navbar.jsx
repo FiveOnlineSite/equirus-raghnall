@@ -28,6 +28,13 @@ export default function Navbar() {
     setIsOpen(false);
     setExpandedMobileMenu(null);
   };
+
+  const closeFocusedDesktopMenu = () => {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 h-[88px] bg-white shadow-[0_1px_12px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-4 md:px-8 xl:px-16">
@@ -47,7 +54,7 @@ export default function Navbar() {
         >
           {navigation.map((item) =>
             item.label === "Private Clients" ? (
-              <div className="group/private flex h-full items-center" key={item.label}>
+              <div className="group/private flex h-full items-center" key={item.label} onMouseEnter={closeFocusedDesktopMenu}>
                 <Link
                   href={item.href}
                   onClick={(event) => event.preventDefault()}
@@ -60,7 +67,6 @@ export default function Navbar() {
                     alt=""
                     width={20}
                     height={20}
-                    className="transition-transform group-hover/private:rotate-180 group-focus-within/private:rotate-180"
                     aria-hidden
                   />
                 </Link>
@@ -90,7 +96,7 @@ export default function Navbar() {
                 </div>
               </div>
             ) : item.label === "Commercial" ? (
-              <div className="group/commercial flex h-full items-center" key={item.label}>
+              <div className="group/commercial flex h-full items-center" key={item.label} onMouseEnter={closeFocusedDesktopMenu}>
                 <Link
                   href={item.href}
                   onClick={(event) => event.preventDefault()}
@@ -103,7 +109,6 @@ export default function Navbar() {
                     alt=""
                     width={20}
                     height={20}
-                    className="transition-transform group-hover/commercial:rotate-180 group-focus-within/commercial:rotate-180"
                     aria-hidden
                   />
                 </Link>
@@ -135,7 +140,7 @@ export default function Navbar() {
                 </div>
               </div>
             ) : item.label === "Reinsurance" ? (
-              <div className="group/reinsurance flex h-full items-center" key={item.label}>
+              <div className="group/reinsurance flex h-full items-center" key={item.label} onMouseEnter={closeFocusedDesktopMenu}>
                 <Link
                   href={item.href}
                   onClick={(event) => event.preventDefault()}
@@ -148,7 +153,6 @@ export default function Navbar() {
                     alt=""
                     width={20}
                     height={20}
-                    className="transition-transform group-hover/reinsurance:rotate-180 group-focus-within/reinsurance:rotate-180"
                     aria-hidden
                   />
                 </Link>
@@ -259,7 +263,7 @@ export default function Navbar() {
                       alt=""
                       width={20}
                       height={20}
-                      className={`mr-3 size-5 shrink-0 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                      className="mr-3 size-5 shrink-0"
                       aria-hidden
                     />
                   </button>

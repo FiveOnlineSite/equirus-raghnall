@@ -33,7 +33,7 @@ function ContactItem({ icon, title, children }) {
       <ContactIcon type={icon} />
       <div>
         <h2 className="text-lg font-semibold text-[#191919]">{title}</h2>
-        <div className="mt-2 text-sm leading-7 text-[#666]">{children}</div>
+        <div className="mt-2 text-base leading-7 text-[#666]">{children}</div>
       </div>
     </div>
   );
@@ -51,17 +51,17 @@ export default function ContactUsPage() {
       <Navbar />
       <main className="overflow-x-clip bg-white">
         <section className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 lg:py-20 xl:px-20">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4E08]">Contact Us</p>
+          <p className="text-base font-medium uppercase tracking-wide text-[#0A4E08]">Contact Us</p>
           <div className="mt-7 grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <div>
               <h1 className="text-3xl font-semibold tracking-tight text-[#171717] md:text-4xl">Let&apos;s Start the Conversation</h1>
               <div className="mt-10 space-y-7">
                 <ContactItem icon="location" title="Registered & Corporate Office">
-                  <address className="not-italic">Equirus Raghnall Insurance Broking Pvt Ltd<br />Technopolis Knowledge Park, Ground Floor,<br />Unit No. 15 &amp;16, Mahakali Caves Road,<br />Andheri East, Mumbai – 400093</address>
+                  <address className="not-italic">Equirus Raghnall Insurance Broking Pvt Ltd<br />Technopolis Knowledge Park, Ground Floor, Unit No. 15 &amp;16, Mahakali Caves Road, Andheri East, Mumbai – 400093</address>
                 </ContactItem>
                 <ContactItem icon="mail" title="Email"><a href="mailto:support@equirusraghnall.com">support@equirusraghnall.com</a></ContactItem>
                 <ContactItem icon="phone" title="Phone & What's app"><a href="tel:+917045161616">+91-7045161616</a></ContactItem>
-                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="#">Instagram</a><span>|</span><a href="#">LinkedIn</a><span>|</span><a href="#">Facebook</a><span>|</span></div></ContactItem>
+                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="https://www.instagram.com/equirus_raghnall/">Instagram</a><span>|</span><a href="https://in.linkedin.com/company/equirusraghnall">LinkedIn</a><span>|</span><a href="https://www.facebook.com/Raghnallinsurance/">Facebook</a><span>|</span></div></ContactItem>
               </div>
             </div>
 
@@ -104,7 +104,7 @@ export default function ContactUsPage() {
         </section>
 
         <section className="mx-auto max-w-[1440px] px-5 pb-8 pt-4 text-center md:px-10 md:pb-20 xl:px-20">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4E08]">Our Presence</p>
+          <p className="text-base font-medium uppercase tracking-wide text-[#0A4E08]">Our Presence</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Across India, Always Within Reach</h2>
           <OfficePresenceMap />
         </section>

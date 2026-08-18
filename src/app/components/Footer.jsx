@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const services = ["Group Insurance", "Commercial Insurance", "Individual Insurance", "Claim Advocacy"];
+const services = [
+  { label: "Travel Insurance", href: "/private-clients/travel-insurance" },
+  { label: "Private Car Insurance", href: "/private-clients/private-car-insurance" },
+  { label: "Health Insurance", href: "/private-clients/health-insurance" },
+  { label: "Term Life Insurance", href: "/private-clients/term-life-insurance" },
+];
 const links = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
@@ -31,7 +36,11 @@ export default function Footer() {
               <ContactRow icon="/assets/shared/mail.svg"><a href="mailto:email@equirusraghnall.com">email@equirusraghnall.com</a></ContactRow>
             </div>
             <h2 className="mb-[18px] mt-5 font-bold text-base leading-7">Follow Us</h2>
-            <div className="flex gap-2">{[["facebook.svg", "Facebook"], ["instagram.svg", "Instagram"], ["linkedin.svg", "LinkedIn"]].map(([icon, label]) => <a href="#" aria-label={label} key={label} className="grid size-6 place-items-center"><Image src={`/assets/shared/${icon}`} alt="" width={24} height={24} aria-hidden /></a>)}</div>
+            <div className="flex gap-2">{[
+              ["facebook.svg", "Facebook", "https://www.facebook.com/Raghnallinsurance/"],
+              ["instagram.svg", "Instagram", "https://www.instagram.com/equirus_raghnall/"],
+              ["linkedin.svg", "LinkedIn", "https://in.linkedin.com/company/equirusraghnall"],
+            ].map(([icon, label, href]) => <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} key={label} className="grid size-6 place-items-center"><Image src={`/assets/shared/${icon}`} alt="" width={24} height={24} aria-hidden /></a>)}</div>
           </section>
 
           <div className="space-y-[18px]"><FooterLinkList title="Services" items={services} /><FooterLinkList title="Links" items={links} /></div>

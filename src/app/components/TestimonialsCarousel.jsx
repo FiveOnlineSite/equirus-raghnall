@@ -8,34 +8,34 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    quote: "Equirus Raghnall brought clarity to a complex insurance decision. Their team listened closely, explained every option, and helped us choose protection that truly fits our needs.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Kashish Shah",
-    imagePosition: "18% center",
+    image: "/assets/home/trusted-avatar-1.png",
   },
   {
-    quote: "The advice was thoughtful, transparent, and refreshingly practical. We now have a stronger insurance programme and far greater confidence in how our risks are managed.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Ritik Jaiswal",
-    imagePosition: "50% center",
+    image: "/assets/home/trusted-avatar-2.png",
   },
   {
-    quote: "From policy review through claims support, the experience has been seamless. The team combines deep expertise with the responsiveness of a trusted long-term partner.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Tinu Singh",
-    imagePosition: "82% center",
+    image: "/assets/home/trusted-avatar-3.png",
   },
    {
-    quote: "From policy review through claims support, the experience has been seamless. The team combines deep expertise with the responsiveness of a trusted long-term partner.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Mohan Singh",
-    imagePosition: "82% center",
+    image: "/assets/home/trusted-avatar-4.png",
   },
    {
-    quote: "From policy review through claims support, the experience has been seamless. The team combines deep expertise with the responsiveness of a trusted long-term partner.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Raj Singh",
-    imagePosition: "82% center",
+    image: "/assets/about/expert-avatar-1.png",
   },
    {
-    quote: "From policy review through claims support, the experience has been seamless. The team combines deep expertise with the responsiveness of a trusted long-term partner.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
     name: "Lal Singh",
-    imagePosition: "82% center",
+    image: "/assets/about/expert-avatar-2.png",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function TestimonialsCarousel() {
     <section className="overflow-hidden bg-[#075409] py-16 text-white md:py-20">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.04em] text-white/90">Words of Trust</p>
+          <p className="text-base font-medium uppercase tracking-[0.04em] text-white/90">Words of Trust</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.02em] md:text-[40px]">Trusted by People Like You</h2>
         </div>
       </div>
@@ -58,21 +58,21 @@ export default function TestimonialsCarousel() {
           slidesOffsetBefore={16}
           slidesOffsetAfter={16}
           slidesPerView={1}
-          breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+          breakpoints={{ 768: { slidesPerView: 2 } }}
           autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           pagination={{ clickable: true }}
           grabCursor
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide className="!h-auto" key={testimonial.name}>
-              <article className="flex h-full min-h-[230px] flex-col rounded-md bg-white px-6 pb-3 pt-6 text-[#242424] shadow-sm md:min-h-[250px] md:px-7 md:pb-4 md:pt-7">
+              <article className="flex h-full min-h-[320px] flex-col rounded-lg bg-white p-7 text-[#242424] shadow-sm md:min-h-[340px] md:p-8">
                 <span className="font-serif text-5xl font-bold leading-none text-black" aria-hidden="true">“</span>
-                <p className="mt-3 text-sm leading-7 text-[#555555]">{testimonial.quote}</p>
-                <div className="mt-auto flex items-center gap-3 pt-6">
-                  <span className="relative size-9 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
-                    <Image src="/assets/home/home-hero.png" alt="" fill sizes="36px" className="object-cover" style={{ objectPosition: testimonial.imagePosition }} />
+                <p className="mt-5 text-base leading-[1.85] text-[#555555]">{testimonial.quote}</p>
+                <div className="mt-auto flex items-center gap-4 pt-8">
+                  <span className="relative size-11 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
+                    <Image src={testimonial.image} alt="" fill sizes="44px" className="object-cover" />
                   </span>
-                  <p className="font-semibold text-[#181818]">{testimonial.name}</p>
+                  <p className="text-xl font-semibold text-[#181818]">{testimonial.name}</p>
                 </div>
               </article>
             </SwiperSlide>

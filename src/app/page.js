@@ -133,7 +133,7 @@ export default function Home() {
         <section className="min-h-[570px] bg-white">
           <div className="mx-auto grid min-h-[570px] max-w-[1440px] items-center gap-10 overflow-hidden px-5 pb-0 pt-10 md:px-10 md:pt-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-20">
             <div className="min-w-0 max-w-[600px]">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
               <h1 className="mt-7 text-[40px] font-semibold leading-[1.02] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl md:text-[52px]">
@@ -175,7 +175,7 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <p className="text-sm font-medium text-[#242424] sm:text-base">
+                <p className="text-base font-medium text-[#242424] sm:text-base">
                   Trusted by over 10M+ People
                 </p>
               </div>
@@ -195,7 +195,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
                 Three Segments
               </p>
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
@@ -248,7 +248,7 @@ export default function Home() {
         <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f8f9ff_100%)] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
                 Services Snapshots
               </p>
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
@@ -300,7 +300,7 @@ export default function Home() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20 xl:px-20">
             <div className="max-w-[560px]">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
                 Our Difference
               </p>
               <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
@@ -355,7 +355,7 @@ export default function Home() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
                 Flagship Offerings
               </p>
               <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
@@ -376,6 +376,10 @@ export default function Home() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition duration-500 hover:scale-[1.03]"
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-0 bg-black/40"
+                      aria-hidden="true"
                     />
                     <span className="absolute left-4 top-4 rounded bg-white/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
                       {product.category}
@@ -414,7 +418,7 @@ export default function Home() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] gap-10 px-5 md:px-10 lg:grid-cols-[0.9fr_1fr_1fr] lg:gap-5 xl:px-20">
             <div className="self-center lg:pr-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-base font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
                 Thought Leadership
               </p>
               <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">
@@ -478,16 +482,16 @@ export default function Home() {
           compactTop
         />
 
-        <section className="bg-white py-14 md:py-16">
+        <section className="bg-white pb-14 pt-4">
           <div className="mx-auto flex max-w-[1440px] flex-col items-start px-5 text-left md:px-10 xl:px-20">
             <Image
               src="/assets/shared/raghnall-logo.png"
               alt="Equirus Raghnall"
-              width={175}
-              height={175}
-              className="h-auto w-[175px] object-contain"
+              width={200}
+              height={200}
+              className="h-[180px] w-[180px] object-contain"
             />
-            <p className="mt-2 text-sm leading-7 text-[#555555]">
+            <p className="text-base leading-7 text-[#555555]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
