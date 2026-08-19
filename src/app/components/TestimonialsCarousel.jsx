@@ -53,22 +53,20 @@ export default function TestimonialsCarousel() {
           className="testimonials-swiper mt-12 w-full !pb-12"
           modules={[Autoplay, Pagination]}
           loop
+          centeredSlides
           speed={700}
-          spaceBetween={16}
-          slidesOffsetBefore={16}
-          slidesOffsetAfter={16}
-          slidesPerView={1}
-          breakpoints={{ 768: { slidesPerView: 2 } }}
-          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          spaceBetween={20}
+          slidesPerView="auto"
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           grabCursor
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide className="!h-auto" key={testimonial.name}>
-              <article className="flex h-full min-h-[320px] flex-col rounded-lg bg-white p-7 text-[#242424] shadow-sm md:min-h-[340px] md:p-8">
-                <span className="font-serif text-5xl font-bold leading-none text-black" aria-hidden="true">“</span>
-                <p className="mt-5 text-base leading-[1.85] text-[#555555]">{testimonial.quote}</p>
-                <div className="mt-auto flex items-center gap-4 pt-8">
+            <SwiperSlide className="!h-auto !w-full sm:!w-[60vw] lg:!w-[48vw] lg:!max-w-[720px]" key={testimonial.name}>
+              <article className="mx-5 flex h-full min-h-[250px] flex-col rounded-lg bg-white p-5 text-[#242424] shadow-sm sm:mx-0 sm:min-h-[280px] sm:p-7 md:min-h-[300px] md:p-8">
+                <span className="font-serif text-4xl font-bold leading-none text-black sm:text-5xl" aria-hidden="true">“</span>
+                <p className="mt-3 text-sm leading-[1.7] text-[#555555] sm:mt-5 sm:text-base sm:leading-[1.85]">{testimonial.quote}</p>
+                <div className="mt-auto flex items-center gap-3 pt-5 sm:gap-4 sm:pt-8">
                   <span className="relative size-11 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
                     <Image src={testimonial.image} alt="" fill sizes="44px" className="object-cover" />
                   </span>
