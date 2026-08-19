@@ -100,7 +100,7 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">About The Company</p>
-            <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+            <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
               Built for Complex Risks. Trusted for Every Solution.
             </h2>
             <div className="mt-6 max-w-[1320px] space-y-3 text-sm leading-7 text-[#555555] md:text-base">
@@ -119,7 +119,7 @@ export default function AboutUsPage() {
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:px-20">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Global Capabilities</p>
-              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] md:text-[32px]">
                 Global Reach.
                 <br />
                 Tailored Protection.
@@ -142,7 +142,7 @@ export default function AboutUsPage() {
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:px-20">
             <div className="lg:order-2">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">What Drives Us</p>
-              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">How We Measure Success</h2>
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">How We Measure Success</h2>
               <p className="mt-7 max-w-[700px] text-sm leading-7 text-[#555555] md:text-base">
                 At Equirus Raghnall, we measure our success by the confidence our clients place in us. We are committed to building enduring partnerships founded on integrity, technical excellence, responsiveness, and a relentless focus on delivering value. As trusted advisors to our clients, we help them anticipate risk, seize opportunities with confidence, and create resilient businesses prepared for the future.
               </p>
@@ -161,7 +161,7 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-white/90 sm:text-base">Why Choose Us</p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[40px]">Why Equirus Raghnall</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[32px]">Why Equirus Raghnall</h2>
             </div>
 
             <div className="mt-12 grid md:mt-14 md:grid-cols-3">
@@ -184,7 +184,7 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Meet Our Team</p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Board Of Directors</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Board Of Directors</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
@@ -212,7 +212,7 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Management Team</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
@@ -240,7 +240,7 @@ export default function AboutUsPage() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team- Reinsurance</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Management Team- Reinsurance</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
@@ -269,7 +269,7 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Why Choose Us</p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Why Equirus Raghnall</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Why Equirus Raghnall</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">

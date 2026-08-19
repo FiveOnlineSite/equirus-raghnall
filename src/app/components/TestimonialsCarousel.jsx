@@ -45,7 +45,7 @@ export default function TestimonialsCarousel() {
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.04em] text-white/90 sm:text-base">Words of Trust</p>
-          <h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[40px]">Trusted by People Like You</h2>
+          <h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[32px]">Trusted by People Like You</h2>
         </div>
       </div>
 

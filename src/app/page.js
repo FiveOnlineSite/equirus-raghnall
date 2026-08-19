@@ -142,7 +142,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
-              <h1 className="mt-7 text-[clamp(30px,9vw,40px)] font-semibold leading-[1.05] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl sm:leading-[1.02] md:text-[52px]">
+              <h1 className="mt-7 text-[clamp(30px,9vw,40px)] font-semibold leading-[1.05] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl sm:leading-[1.02] md:text-[48px]">
                 <span className="block">Not Just Coverage</span>
                 <span className="block lg:whitespace-nowrap">Complete Risk Strategy.</span>
               </h1>
@@ -204,7 +204,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Three Segments
               </p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
                 Our Core Insurance Solutions
               </h2>
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Services Snapshots
               </p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
                 Risk Advisory Beyond The Policy
               </h2>
             </div>
@@ -308,7 +308,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Our Difference
               </p>
-              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
                 Why Equirus Raghnall?
               </h2>
               <p className="mt-7 text-base leading-7 text-[#555555]">
@@ -363,7 +363,7 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Flagship Offerings
               </p>
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
                 Our Hero Products
               </h2>
             </div>

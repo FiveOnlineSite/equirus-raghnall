@@ -71,7 +71,7 @@ export default function ContactUsPage() {
 
         <section className="mx-auto max-w-[1440px] px-5 pb-16 md:px-10 xl:px-12">
           <div className="rounded-xl bg-[#0A4E08] px-6 py-12 text-white md:px-16 md:py-16">
-            <div className="text-center"><p className="text-sm font-medium uppercase tracking-wide text-white/80">Visit Us</p><h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold md:text-4xl">Serving Beyond Our Headquarters</h2></div>
+            <div className="text-center"><p className="text-sm font-medium uppercase tracking-wide text-white/80">Visit Us</p><h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold md:text-3xl">Serving Beyond Our Headquarters</h2></div>
             <div className="mx-auto mt-12 grid max-w-5xl items-center gap-9 lg:grid-cols-[1.15fr_1fr]">
               <div className="overflow-hidden bg-white">
                 <iframe

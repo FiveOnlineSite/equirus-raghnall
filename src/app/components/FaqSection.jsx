@@ -17,7 +17,7 @@ export default function FaqSection({
       <div className="mx-auto grid max-w-[1440px] gap-10 px-5 md:px-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20 xl:px-20">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">{eyebrow}</p>
-          <h2 className="mt-6 max-w-[390px] text-[clamp(24px,7vw,30px)] font-semibold leading-[1.28] tracking-[-0.02em] text-[#242424] md:text-[30px]">
+          <h2 className="mt-6 max-w-[390px] text-[clamp(24px,7vw,30px)] font-semibold leading-[1.28] tracking-[-0.02em] text-[#242424] md:text-[32px]">
             {title}
           </h2>
         </div>

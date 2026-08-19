@@ -12,7 +12,7 @@ export default function ServiceCoverageGrid({
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>
-          <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">{title}</h2>
+          <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">{title}</h2>
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

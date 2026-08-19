@@ -17,7 +17,7 @@ export default function ServiceOverview({
       {overlap ? <span className="absolute inset-x-0 bottom-0 top-10 -z-10 bg-[#F8F9FF] md:top-14" aria-hidden="true" /> : null}
       <div className="mx-auto max-w-[1360px] rounded-xl bg-white px-6 py-10 shadow-[0_4px_22px_rgba(0,0,0,0.1)] md:px-10 md:py-12">
         <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>
-        <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[36px]">{title}</h2>
+        <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">{title}</h2>
 
         <div className="mt-10 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative mx-auto w-full max-w-[520px] pb-2 pl-2">
