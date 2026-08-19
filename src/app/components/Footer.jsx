@@ -21,7 +21,7 @@ const legalLinks = [
 ];
 
 function FooterLinkList({ title, items }) {
-  return <section><h2 className="mb-[18px] font-bold leading-7">{title}</h2><ul className="space-y-3 text-sm leading-6">{items.map((item) => { const label = typeof item === "string" ? item : item.label; const href = typeof item === "string" ? "#" : item.href; return <li key={label}><Link href={href} className="hover:underline">{label}</Link></li>; })}</ul></section>;
+  return <section><h2 className="mb-[18px] font-bold leading-7">{title}</h2><ul className="space-y-3 text-sm leading-6">{items.map((item) => { const label = typeof item === "string" ? item : item.label; const href = typeof item === "string" ? "#" : item.href; return <li key={label}><Link href={href}>{label}</Link></li>; })}</ul></section>;
 }
 
 function ContactRow({ icon, children }) {
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-5 border-t border-white/60 pt-4 text-sm leading-6 lg:mt-[27px] lg:flex-row lg:items-center lg:justify-between">
-          <nav aria-label="Legal" className="flex flex-wrap gap-y-2">{legalLinks.map((item, index) => <Link key={item.label} href={item.href} target={item.newTab ? "_blank" : undefined} rel={item.newTab ? "noopener noreferrer" : undefined} className={`hover:underline ${index ? "ml-3 border-l border-white/70 pl-3" : ""}`}>{item.label}</Link>)}</nav>
+          <nav aria-label="Legal" className="flex flex-wrap gap-y-2">{legalLinks.map((item, index) => <Link key={item.label} href={item.href} target={item.newTab ? "_blank" : undefined} rel={item.newTab ? "noopener noreferrer" : undefined} className={index ? "ml-3 border-l border-white/70 pl-3" : undefined}>{item.label}</Link>)}</nav>
           <p className="flex items-center gap-2 whitespace-normal lg:whitespace-nowrap"><Image src="/assets/shared/copyright.svg" alt="" width={20} height={20} aria-hidden className="size-5" />2026 Equirus Raghnall Insurance All Rights Reserved</p>
         </div>
       </div>
