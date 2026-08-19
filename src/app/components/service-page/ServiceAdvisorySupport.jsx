@@ -13,16 +13,16 @@ export default function ServiceAdvisorySupport({
     <section className="bg-white py-16 md:py-20">
       <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:px-20">
         <div>
-          <p className="text-base font-medium uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
-          <h2 className="mt-6 text-3xl font-semibold leading-[1.3] tracking-[-0.02em] text-[#111111] md:text-[40px]">{title}</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>
+          <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold leading-[1.3] tracking-[-0.02em] text-[#111111] md:text-[40px]">{title}</h2>
           <p className="mt-6 max-w-[650px] text-sm leading-7 text-[#555555] md:text-base">{description}</p>
 
           <ol className="mt-8 space-y-5">
             {steps.map((step, index) => (
               <li key={step.title} className="grid grid-cols-[auto_1fr] gap-x-2">
-                <span className="text-base font-medium text-[#3d3d3d]">{index + 1}.</span>
+                <span className="text-sm font-medium text-[#3d3d3d] sm:text-base">{index + 1}.</span>
                 <div>
-                  <h3 className="text-lg font-medium text-[#3d3d3d]">{step.title}</h3>
+                  <h3 className="text-base font-medium text-[#3d3d3d] sm:text-lg">{step.title}</h3>
                   {step.description ? <p className="mt-3 text-sm leading-7 text-[#555555] md:text-base">{step.description}</p> : null}
                 </div>
               </li>

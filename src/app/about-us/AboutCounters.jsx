@@ -47,7 +47,7 @@ export default function AboutCounters() {
     <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-10 md:mt-14 md:grid-cols-4">
       {stats.map((stat) => (
         <div key={stat.label}>
-          <p className="text-[32px] font-semibold leading-none text-[#0A4E08]">
+          <p className="text-[28px] font-semibold leading-none text-[#0A4E08] sm:text-[32px]">
             <AnimatedNumber value={stat.value} suffix={stat.suffix} />
           </p>
           <p className="mt-5 text-sm text-[#555555] md:text-base">{stat.label}</p>

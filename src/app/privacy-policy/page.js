@@ -27,7 +27,7 @@ function PolicyList({ items }) {
 
 export default function PrivacyPolicyPage() {
   return (
-    <><Navbar /><main className="bg-[#F8F9FF] py-16 md:py-20"><article className="mx-auto max-w-[960px] px-5 md:px-10"><div className="rounded-2xl bg-white px-6 py-10 shadow-[0_8px_30px_rgba(25,34,80,0.05)] md:px-12 md:py-14"><h1 className="text-center text-3xl font-semibold tracking-[-0.025em] text-[#111111]">PRIVACY POLICY</h1><div className="mt-9 space-y-9 text-base leading-8 text-[#555555]">
+    <><Navbar /><main className="bg-[#F8F9FF] py-16 md:py-20"><article className="mx-auto max-w-[960px] px-5 md:px-10"><div className="rounded-2xl bg-white px-6 py-10 shadow-[0_8px_30px_rgba(25,34,80,0.05)] md:px-12 md:py-14"><h1 className="text-center text-[clamp(26px,7vw,30px)] font-semibold tracking-[-0.025em] text-[#111111]">PRIVACY POLICY</h1><div className="mt-9 space-y-9 text-base leading-8 text-[#555555]">
       <div className="space-y-4">
         <p>We value you as a customer and are committed to protecting your privacy. This commitment reflects the value we place on earning and keeping the trust of our customers, business partners, and others who share their personal information with us.</p>
         <p>In the process of operating the website, we may become aware of information relating to you, including information that is confidential in nature. We are strongly committed to protecting your privacy online and have taken steps to protect such information. To aid us in protecting your privacy, you should maintain secrecy of your login ID and password, if any, provided to you in connection with your account with <a className="text-[#0A4E08] hover:underline" href="https://www.raghnall.co.in/">https://www.raghnall.co.in/</a> .</p>

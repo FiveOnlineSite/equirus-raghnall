@@ -32,8 +32,8 @@ function ContactItem({ icon, title, children }) {
     <div className="flex items-start gap-4">
       <ContactIcon type={icon} />
       <div>
-        <h2 className="text-lg font-semibold text-[#191919]">{title}</h2>
-        <div className="mt-2 text-base leading-7 text-[#666]">{children}</div>
+        <h2 className="text-base font-semibold text-[#191919] sm:text-lg">{title}</h2>
+        <div className="mt-2 text-sm leading-6 text-[#666] sm:text-base sm:leading-7">{children}</div>
       </div>
     </div>
   );
@@ -51,10 +51,10 @@ export default function ContactUsPage() {
       <Navbar />
       <main className="overflow-x-clip bg-white">
         <section className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 lg:py-20 xl:px-20">
-          <p className="text-base font-medium uppercase tracking-wide text-[#0A4E08]">Contact Us</p>
+          <p className="text-sm font-medium uppercase tracking-wide text-[#0A4E08] sm:text-base">Contact Us</p>
           <div className="mt-7 grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <div>
-              <h1 className="text-3xl font-semibold tracking-tight text-[#171717] md:text-4xl">Let&apos;s Start the Conversation</h1>
+              <h1 className="text-[clamp(24px,7vw,30px)] font-semibold tracking-tight text-[#171717] md:text-4xl">Let&apos;s Start the Conversation</h1>
               <div className="mt-10 space-y-7">
                 <ContactItem icon="location" title="Registered & Corporate Office">
                   <address className="not-italic">Equirus Raghnall Insurance Broking Pvt Ltd<br />Technopolis Knowledge Park, Ground Floor, Unit No. 15 &amp;16, Mahakali Caves Road, Andheri East, Mumbai – 400093</address>
@@ -71,7 +71,7 @@ export default function ContactUsPage() {
 
         <section className="mx-auto max-w-[1440px] px-5 pb-16 md:px-10 xl:px-12">
           <div className="rounded-xl bg-[#0A4E08] px-6 py-12 text-white md:px-16 md:py-16">
-            <div className="text-center"><p className="text-sm font-medium uppercase tracking-wide text-white/80">Visit Us</p><h2 className="mt-4 text-3xl font-semibold md:text-4xl">Serving Beyond Our Headquarters</h2></div>
+            <div className="text-center"><p className="text-sm font-medium uppercase tracking-wide text-white/80">Visit Us</p><h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold md:text-4xl">Serving Beyond Our Headquarters</h2></div>
             <div className="mx-auto mt-12 grid max-w-5xl items-center gap-9 lg:grid-cols-[1.15fr_1fr]">
               <div className="overflow-hidden bg-white">
                 <iframe
@@ -84,11 +84,11 @@ export default function ContactUsPage() {
                 />
               </div>
               <div className="border-white/50 lg:border-l lg:pl-8">
-                <h3 className="text-2xl font-semibold">Gift City</h3>
-                <p className="mt-5 text-lg font-semibold">Equirus Securities Pvt. Ltd</p>
+                <h3 className="text-xl font-semibold sm:text-2xl">Gift City</h3>
+                <p className="mt-5 text-base font-semibold sm:text-lg">Equirus Securities Pvt. Ltd</p>
                 <div className="mt-4 flex items-start gap-3">
                   <Image src="/assets/shared/map-pin.svg" alt="" width={20} height={20} aria-hidden className="mt-1 size-5 shrink-0" />
-                  <address className="not-italic leading-7 text-white/90">Unit no. GA–27, Seat no. 1–6, Ground Floor, Pragya Accelerator, Block–15 T, Road 11, Zone 1, Processing area, GIFT SEZ, GIFT City, Gandhinagar 382355</address>
+                  <address className="text-sm not-italic leading-6 text-white/90 sm:text-base sm:leading-7">Unit no. GA–27, Seat no. 1–6, Ground Floor, Pragya Accelerator, Block–15 T, Road 11, Zone 1, Processing area, GIFT SEZ, GIFT City, Gandhinagar 382355</address>
                 </div>
                 <p className="mt-5 flex items-center gap-3">
                   <Image src="/assets/shared/phone.svg" alt="" width={20} height={20} aria-hidden className="size-5 shrink-0" />
@@ -104,8 +104,8 @@ export default function ContactUsPage() {
         </section>
 
         <section className="mx-auto max-w-[1440px] px-5 pb-8 pt-4 text-center md:px-10 md:pb-20 xl:px-20">
-          <p className="text-base font-medium uppercase tracking-wide text-[#0A4E08]">Our Presence</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Across India, Always Within Reach</h2>
+          <p className="text-sm font-medium uppercase tracking-wide text-[#0A4E08] sm:text-base">Our Presence</p>
+          <h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold tracking-tight md:text-4xl">Across India, Always Within Reach</h2>
           <OfficePresenceMap />
         </section>
       </main>

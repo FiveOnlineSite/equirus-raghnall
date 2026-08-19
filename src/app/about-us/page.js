@@ -59,7 +59,7 @@ export default function AboutUsPage() {
         <section className="min-h-[calc(100vh-88px)] bg-[#F8F9FF] py-10 md:py-12">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h1 className="text-[38px] font-semibold leading-[1.12] tracking-[-0.025em] text-[#080808] md:text-[40px]">
+              <h1 className="text-[clamp(30px,9vw,38px)] font-semibold leading-[1.12] tracking-[-0.025em] text-[#080808] md:text-[40px]">
                 More Than Insurance.
                 <br />
                 A Partner in Every Decision.
@@ -99,8 +99,8 @@ export default function AboutUsPage() {
 
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
-            <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">About The Company</p>
-            <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+            <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">About The Company</p>
+            <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
               Built for Complex Risks. Trusted for Every Solution.
             </h2>
             <div className="mt-6 max-w-[1320px] space-y-3 text-sm leading-7 text-[#555555] md:text-base">
@@ -118,8 +118,8 @@ export default function AboutUsPage() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:px-20">
             <div>
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">Global Capabilities</p>
-              <h2 className="mt-6 text-3xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Global Capabilities</p>
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] md:text-[40px]">
                 Global Reach.
                 <br />
                 Tailored Protection.
@@ -141,8 +141,8 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 xl:px-20">
             <div className="lg:order-2">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">What Drives Us</p>
-              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">How We Measure Success</h2>
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">What Drives Us</p>
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">How We Measure Success</h2>
               <p className="mt-7 max-w-[700px] text-sm leading-7 text-[#555555] md:text-base">
                 At Equirus Raghnall, we measure our success by the confidence our clients place in us. We are committed to building enduring partnerships founded on integrity, technical excellence, responsiveness, and a relentless focus on delivering value. As trusted advisors to our clients, we help them anticipate risk, seize opportunities with confidence, and create resilient businesses prepared for the future.
               </p>
@@ -160,8 +160,8 @@ export default function AboutUsPage() {
         <section className="bg-[#30337A] py-16 text-white md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-white/90">Why Choose Us</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] md:text-[40px]">Why Equirus Raghnall</h2>
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-white/90 sm:text-base">Why Choose Us</p>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[40px]">Why Equirus Raghnall</h2>
             </div>
 
             <div className="mt-12 grid md:mt-14 md:grid-cols-3">
@@ -171,8 +171,8 @@ export default function AboutUsPage() {
                 { number: "03.", title: "Access Top Insurance Markets", text: "As an independent broker, we compare leading insurers and global markets to secure tailored coverage with the most competitive terms." },
               ].map((item, index) => (
                 <article key={item.number} className={`py-8 md:min-h-[250px] md:px-8 md:py-0 xl:px-10 ${index ? "border-t border-white/60 md:border-l md:border-t-0" : ""}`}>
-                  <p className="text-[32px] font-semibold leading-none text-white/65">{item.number}</p>
-                  <h3 className={`mt-10 text-xl font-semibold leading-7 ${index === 2 ? "lg:whitespace-nowrap" : ""}`}>{item.title}</h3>
+                  <p className="text-[28px] font-semibold leading-none text-white/65 sm:text-[32px]">{item.number}</p>
+                  <h3 className={`mt-10 text-lg font-semibold leading-7 sm:text-xl ${index === 2 ? "lg:whitespace-nowrap" : ""}`}>{item.title}</h3>
                   <p className="mt-5 text-sm leading-7 text-white/90">{item.text}</p>
                 </article>
               ))}
@@ -183,25 +183,25 @@ export default function AboutUsPage() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">Meet Our Team</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Board Of Directors</h2>
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Meet Our Team</p>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Board Of Directors</h2>
             </div>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
               {directors.map((director) => (
                 <article key={director.name} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
                     src={director.image}
                     alt={director.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: director.position }}
                   />
                   <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
-                    <h3 className="text-base font-semibold leading-6">{director.name}</h3>
-                    <p className="mt-1 text-sm leading-5 text-white/95">{director.role}</p>
-                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{director.description ?? `${director.name} provides strategic leadership and expertise as ${director.role}.`}</p>
+                    <h3 className="text-[13px] font-semibold leading-4 sm:text-base sm:leading-6">{director.name}</h3>
+                    <p className="mt-1 text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-5">{director.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-6">{director.description ?? `${director.name} provides strategic leadership and expertise as ${director.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -212,24 +212,24 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team</h2>
             </div>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
               {managementTeam.map((member, index) => (
                 <article key={`${member.name}-${index}`} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: member.position }}
                   />
                   <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
-                    <h3 className="text-base font-semibold leading-6">{member.name}</h3>
-                    <p className="mt-1 text-sm leading-5 text-white/95">{member.role}</p>
-                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{member.description ?? `${member.name} brings specialist experience and leadership to the role of ${member.role}.`}</p>
+                    <h3 className="text-[13px] font-semibold leading-4 sm:text-base sm:leading-6">{member.name}</h3>
+                    <p className="mt-1 text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-5">{member.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-6">{member.description ?? `${member.name} brings specialist experience and leadership to the role of ${member.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -240,24 +240,24 @@ export default function AboutUsPage() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team- Reinsurance</h2>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Management Team- Reinsurance</h2>
             </div>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
               {reinsuranceTeam.map((member) => (
                 <article key={member.name} tabIndex={0} className="group relative aspect-[0.9/1] overflow-hidden rounded-lg bg-[#d7d9db] outline-none">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:blur-sm group-focus-visible:scale-[1.03] group-focus-visible:blur-sm"
                     style={{ objectPosition: member.position }}
                   />
                   <div className="team-card-label absolute inset-x-0 bottom-0 px-4 py-2.5 text-white">
-                    <h3 className="text-base font-semibold leading-6">{member.name}</h3>
-                    <p className="mt-1 text-sm leading-5 text-white/95">{member.role}</p>
-                    <p className="team-card-description whitespace-pre-line text-sm leading-6 text-white/95">{member.description ?? `${member.name} contributes deep market expertise and leadership as ${member.role}.`}</p>
+                    <h3 className="text-[13px] font-semibold leading-4 sm:text-base sm:leading-6">{member.name}</h3>
+                    <p className="mt-1 text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-5">{member.role}</p>
+                    <p className="team-card-description whitespace-pre-line text-[11px] leading-4 text-white/95 sm:text-sm sm:leading-6">{member.description ?? `${member.name} contributes deep market expertise and leadership as ${member.role}.`}</p>
                   </div>
                 </article>
               ))}
@@ -268,11 +268,11 @@ export default function AboutUsPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">Why Choose Us</p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Why Equirus Raghnall</h2>
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">Why Choose Us</p>
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">Why Equirus Raghnall</h2>
             </div>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
               {awards.map((award) => (
                 <article key={award.name} className="text-center">
                   <div className="group relative aspect-[305/312] overflow-hidden rounded-lg bg-[#d7d9db]">
@@ -280,13 +280,13 @@ export default function AboutUsPage() {
                       src={award.image}
                       alt={award.name}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition duration-500 group-hover:scale-[1.03]"
                       style={{ objectPosition: award.position }}
                     />
                   </div>
-                  <h3 className="mx-auto mt-4 max-w-[271px] text-xl font-semibold leading-8 text-[#080808]">{award.name}</h3>
-                  <p className="mt-2 text-base leading-7 text-[#3d3d3d]">{award.organizer}</p>
+                  <h3 className="mx-auto mt-3 max-w-[271px] text-sm font-semibold leading-5 text-[#080808] sm:mt-4 sm:text-xl sm:leading-8">{award.name}</h3>
+                  <p className="mt-1 text-xs leading-5 text-[#3d3d3d] sm:mt-2 sm:text-base sm:leading-7">{award.organizer}</p>
                 </article>
               ))}
             </div>

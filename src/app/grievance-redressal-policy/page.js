@@ -26,7 +26,7 @@ export default function GrievanceRedressalPolicyPage() {
       <main className="bg-[#F8F9FF] py-16 md:py-20">
         <article className="mx-auto max-w-[960px] px-5 md:px-10">
           <div className="rounded-2xl bg-white px-6 py-10 shadow-[0_8px_30px_rgba(25,34,80,0.05)] md:px-12 md:py-14">
-            <h1 className="text-center text-3xl font-semibold tracking-[-0.025em] text-[#111111]">Grievance Redressal Policy</h1>
+            <h1 className="text-center text-[clamp(26px,7vw,30px)] font-semibold tracking-[-0.025em] text-[#111111]">Grievance Redressal Policy</h1>
             <div className="mt-10 space-y-9 text-base leading-8 text-[#555555]">
               <section>
                 <h2 className="text-xl font-semibold text-[#111111]">Objectives:</h2>

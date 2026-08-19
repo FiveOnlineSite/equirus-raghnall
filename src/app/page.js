@@ -139,14 +139,14 @@ export default function Home() {
         <section className="min-h-[570px] bg-white">
           <div className="mx-auto grid min-h-[570px] max-w-[1440px] items-center gap-10 overflow-hidden px-5 pb-0 pt-10 md:px-10 md:pt-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-20">
             <div className="min-w-0 max-w-[600px]">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
-              <h1 className="mt-7 text-[40px] font-semibold leading-[1.02] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl md:text-[52px]">
+              <h1 className="mt-7 text-[clamp(30px,9vw,40px)] font-semibold leading-[1.05] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl sm:leading-[1.02] md:text-[52px]">
                 <span className="block">Not Just Coverage</span>
                 <span className="block lg:whitespace-nowrap">Complete Risk Strategy.</span>
               </h1>
-              <p className="mt-8 max-w-[520px] text-base leading-7 text-[#555555]">
+              <p className="mt-8 max-w-[520px] text-[15px] leading-7 text-[#555555] sm:text-base">
                 We partner with individuals, businesses, and institutions to
                 structure insurance that protects, performs, and scales with
                 evolving risk landscapes.
@@ -201,10 +201,10 @@ export default function Home() {
         >
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Three Segments
               </p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
                 Our Core Insurance Solutions
               </h2>
             </div>
@@ -224,10 +224,10 @@ export default function Home() {
                     aria-hidden
                     className="size-12 object-contain"
                   />
-                  <h3 className="mt-5 text-xl font-semibold text-[#151515]">
+                  <h3 className="mt-5 text-lg font-semibold text-[#151515] sm:text-xl">
                     {service.title}
                   </h3>
-                  <p className="mt-4 min-h-[84px] text-base leading-7 text-[#555555]">
+                  <p className="mt-4 min-h-[84px] text-[15px] leading-7 text-[#555555] sm:text-base">
                     {service.description}
                   </p>
                   <span className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]">
@@ -252,10 +252,10 @@ export default function Home() {
         <section className="bg-[linear-gradient(180deg,#ffffff_0%,#f8f9ff_100%)] py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Services Snapshots
               </p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
                 Risk Advisory Beyond The Policy
               </h2>
             </div>
@@ -289,7 +289,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="mt-auto pt-12">
-                    <h3 className="text-xl font-semibold text-[#151515] transition-colors group-hover:text-white">
+                    <h3 className="text-lg font-semibold text-[#151515] transition-colors group-hover:text-white sm:text-xl">
                       {service.title}
                     </h3>
                     <p className="mt-3 text-[15px] leading-7 text-[#555555] transition-colors group-hover:text-white/90">
@@ -305,10 +305,10 @@ export default function Home() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20 xl:px-20">
             <div className="max-w-[560px]">
-              <p className="text-base font-medium uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Our Difference
               </p>
-              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
                 Why Equirus Raghnall?
               </h2>
               <p className="mt-7 text-base leading-7 text-[#555555]">
@@ -360,10 +360,10 @@ export default function Home() {
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <p className="text-base font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Flagship Offerings
               </p>
-              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
+              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[40px]">
                 Our Hero Products
               </h2>
             </div>
@@ -391,7 +391,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="p-5 md:p-6">
-                    <h3 className="text-2xl font-semibold tracking-[-0.02em] text-[#111111]">
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-2xl">
                       {product.title}
                     </h3>
                     <p className="mt-4 text-base leading-7 text-[#555555]">
@@ -423,10 +423,10 @@ export default function Home() {
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] gap-10 px-5 md:px-10 lg:grid-cols-[0.9fr_1fr_1fr] lg:gap-5 xl:px-20">
             <div className="self-center lg:pr-10">
-              <p className="text-base font-semibold uppercase tracking-[0.04em] text-[#0A4E08]">
+              <p className="text-sm font-semibold uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 Thought Leadership
               </p>
-              <h2 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">
+              <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[30px]">
                 Beyond The Policy
               </h2>
               <p className="mt-6 max-w-[390px] text-base leading-7 text-[#555555]">
@@ -474,7 +474,7 @@ export default function Home() {
                     <time dateTime="2026-07-11">11 Jul</time>
                     <span>2 min read</span>
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold leading-7 tracking-[-0.01em] text-[#181818] transition-colors group-hover:text-[#0A4E08]">
+                  <h3 className="mt-4 text-lg font-semibold leading-7 tracking-[-0.01em] text-[#181818] transition-colors group-hover:text-[#0A4E08] sm:text-xl">
                     {article.title}
                   </h3>
                 </Link>

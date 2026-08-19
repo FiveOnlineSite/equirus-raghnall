@@ -119,6 +119,22 @@ footer[data-reveal] {
   transform: translateY(0);
 }
 
+@media (max-width: 639px) {
+  .team-card-label {
+    height: 60px;
+    padding: 6px 8px;
+  }
+
+  .team-card-description {
+    padding-top: 8px;
+  }
+
+  .group:hover > .team-card-label,
+  .group:focus-visible > .team-card-label {
+    padding: 8px;
+  }
+}
+
 .home-hero-palm {
   opacity: 0;
   animation: home-palm-enter 2500ms cubic-bezier(0.22, 1, 0.36, 1) 500ms forwards;

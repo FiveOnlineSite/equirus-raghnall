@@ -9,7 +9,7 @@ export default function ServiceCta({
   return (
     <section className="bg-[#075409] px-5 py-14 text-center text-white md:px-10 md:py-16">
       <div className="mx-auto max-w-[820px]">
-        <h2 className="text-3xl font-semibold tracking-[-0.02em] md:text-[40px]">{title}</h2>
+        <h2 className="text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[40px]">{title}</h2>
         <p className="mx-auto mt-5 max-w-[650px] text-sm leading-7 text-white/90 md:text-base">{description}</p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

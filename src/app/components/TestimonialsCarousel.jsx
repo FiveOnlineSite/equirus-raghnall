@@ -44,8 +44,8 @@ export default function TestimonialsCarousel() {
     <section className="overflow-hidden bg-[#075409] py-16 text-white md:py-20">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
         <div className="text-center">
-          <p className="text-base font-medium uppercase tracking-[0.04em] text-white/90">Words of Trust</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.02em] md:text-[40px]">Trusted by People Like You</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.04em] text-white/90 sm:text-base">Words of Trust</p>
+          <h2 className="mt-4 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] md:text-[40px]">Trusted by People Like You</h2>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ export default function TestimonialsCarousel() {
                   <span className="relative size-11 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
                     <Image src={testimonial.image} alt="" fill sizes="44px" className="object-cover" />
                   </span>
-                  <p className="text-xl font-semibold text-[#181818]">{testimonial.name}</p>
+                  <p className="text-lg font-semibold text-[#181818] sm:text-xl">{testimonial.name}</p>
                 </div>
               </article>
             </SwiperSlide>

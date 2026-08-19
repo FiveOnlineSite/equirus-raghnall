@@ -34,7 +34,7 @@ function Counter({ value, suffix, active }) {
     return () => cancelAnimationFrame(animationFrame);
   }, [active, value]);
 
-  return <strong className="text-3xl font-semibold tabular-nums md:text-[34px]">{count}{suffix}</strong>;
+  return <strong className="text-[clamp(26px,7vw,30px)] font-semibold tabular-nums md:text-[34px]">{count}{suffix}</strong>;
 }
 
 export default function CounterStats() {

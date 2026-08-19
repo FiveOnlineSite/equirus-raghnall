@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
       <main className="bg-[#F8F9FF] py-16 md:py-20">
         <section className="mx-auto max-w-[960px] px-5 md:px-10">
           <div className="rounded-2xl bg-white px-6 py-10 shadow-[0_8px_30px_rgba(25,34,80,0.05)] md:px-12 md:py-14">
-            <h1 className="mt-3 text-center text-3xl font-semibold tracking-[-0.025em] text-[#111111]">
+            <h1 className="mt-3 text-center text-[clamp(26px,7vw,30px)] font-semibold tracking-[-0.025em] text-[#111111]">
               Disclaimer
             </h1>
             <div className="mt-8 space-y-6 text-base leading-8 text-[#555555]">

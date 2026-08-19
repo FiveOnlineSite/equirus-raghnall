@@ -26,8 +26,8 @@ export default function ServiceHero({
 
       <div className="mx-auto flex min-h-[560px] max-w-[1440px] flex-col px-5 pb-9 pt-14 text-center md:px-10 md:pt-16 xl:px-20">
         <div className="mx-auto max-w-[650px]">
-          <p className="text-base font-medium uppercase tracking-[0.04em] text-[#376E00]">{label}</p>
-          <h1 className="mt-6 text-[40px] font-semibold leading-[1.08] tracking-[-0.025em] text-[#080808] md:text-[54px]">{title}</h1>
+          <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>
+          <h1 className="mt-6 text-[clamp(30px,9vw,40px)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#080808] md:text-[54px]">{title}</h1>
           <p className="mx-auto mt-7 max-w-[530px] text-sm leading-6 text-[#555555] md:text-base md:leading-7">{description}</p>
         </div>
 
@@ -38,7 +38,7 @@ export default function ServiceHero({
                 {feature.icon ? (
                   <Image src={feature.icon} alt="" width={30} height={30} className="size-6 shrink-0 object-contain sm:size-[30px]" aria-hidden />
                 ) : null}
-                <p className="max-w-[160px] text-base font-medium leading-6 text-[#242424]">{feature.title}</p>
+                <p className="max-w-[160px] text-sm font-medium leading-5 text-[#242424] sm:text-base sm:leading-6">{feature.title}</p>
               </div>
             ))}
           </div>

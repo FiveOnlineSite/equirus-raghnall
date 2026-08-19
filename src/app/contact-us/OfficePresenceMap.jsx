@@ -82,7 +82,7 @@ export default function OfficePresenceMap() {
 
       <div className="order-1 mx-auto mb-6 flex w-fit max-w-full flex-col items-start gap-3 text-left md:absolute md:right-0 md:top-16 md:mb-0 md:block md:space-y-3">
         {legend.map(([type, label]) => (
-          <div className="flex items-center gap-3 text-base font-medium text-[#080808]" key={type}>
+          <div className="flex items-center gap-3 text-sm font-medium text-[#080808] sm:text-base" key={type}>
             <Image src={pinAssets[type === "current" ? "green" : type === "upcoming" ? "blue" : "registered-green"]} alt="" width={18} height={18} className="size-[18px]" aria-hidden />
             <span>{label}</span>
           </div>
