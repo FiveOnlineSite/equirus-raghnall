@@ -69,6 +69,22 @@ footer[data-reveal] {
   background: white;
 }
 
+.mobile-stats-marquee {
+  overflow: hidden;
+}
+
+.mobile-stats-track {
+  display: flex;
+  width: max-content;
+  animation: mobile-stats-scroll 18s linear infinite;
+}
+
+@keyframes mobile-stats-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .team-card-label {
   isolation: isolate;
   display: flex;

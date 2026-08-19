@@ -59,7 +59,7 @@ export default function AboutUsPage() {
         <section className="min-h-[calc(100vh-88px)] bg-[#F8F9FF] py-10 md:py-12">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h1 className="text-[clamp(30px,9vw,38px)] font-semibold leading-[1.12] tracking-[-0.025em] text-[#080808] md:text-[40px]">
+              <h1 className="text-2xl font-semibold leading-[1.12] tracking-[-0.025em] text-[#080808] md:text-[40px]">
                 More Than Insurance.
                 <br />
                 A Partner in Every Decision.

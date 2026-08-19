@@ -44,15 +44,30 @@ function AnimatedNumber({ value, suffix }) {
 
 export default function AboutCounters() {
   return (
-    <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-10 md:mt-14 md:grid-cols-4">
-      {stats.map((stat) => (
-        <div key={stat.label}>
-          <p className="text-[28px] font-semibold leading-none text-[#0A4E08] sm:text-[32px]">
-            <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-          </p>
-          <p className="mt-5 text-sm text-[#555555] md:text-base">{stat.label}</p>
+    <>
+      <div className="mobile-stats-marquee mt-12 text-center md:hidden">
+        <div className="mobile-stats-track">
+          {[...stats, ...stats].map((stat, index) => (
+            <div className="w-[60vw] shrink-0 pb-2" key={`${stat.label}-${index}`} aria-hidden={index >= stats.length}>
+              <p className="text-[28px] font-semibold leading-none text-[#0A4E08]">
+                {stat.value}{stat.suffix}
+              </p>
+              <p className="mt-5 text-sm text-[#555555]">{stat.label}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+
+      <div className="mt-14 hidden grid-cols-4 gap-x-8 md:grid">
+        {stats.map((stat) => (
+          <div key={stat.label}>
+            <p className="text-[32px] font-semibold leading-none text-[#0A4E08]">
+              <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+            </p>
+            <p className="mt-5 text-base text-[#555555]">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

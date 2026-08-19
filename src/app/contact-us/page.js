@@ -61,7 +61,7 @@ export default function ContactUsPage() {
                 </ContactItem>
                 <ContactItem icon="mail" title="Email"><a href="mailto:support@equirusraghnall.com">support@equirusraghnall.com</a></ContactItem>
                 <ContactItem icon="phone" title="Phone & What's app"><a href="tel:+917045161616">+91-7045161616</a></ContactItem>
-                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="https://www.instagram.com/equirus_raghnall/" target="_blank" rel="noopener noreferrer">Instagram</a><span>|</span><a href="https://in.linkedin.com/company/equirusraghnall" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>|</span><a href="https://www.facebook.com/Raghnallinsurance/" target="_blank" rel="noopener noreferrer">Facebook</a><span>|</span></div></ContactItem>
+                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="https://www.instagram.com/equirus_raghnall/" target="_blank" rel="noopener noreferrer">Instagram</a><span>|</span><a href="https://in.linkedin.com/company/equirusraghnall" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>|</span><a href="https://www.facebook.com/Raghnallinsurance/" target="_blank" rel="noopener noreferrer">Facebook</a></div></ContactItem>
               </div>
             </div>
 

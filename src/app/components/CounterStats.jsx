@@ -60,11 +60,22 @@ export default function CounterStats() {
 
   return (
     <section ref={sectionRef} className="bg-[#30337A] text-white" aria-label="Company statistics">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-y-10 px-5 py-10 text-center md:px-10 lg:grid-cols-4 lg:py-11 xl:px-20">
+      <div className="mobile-stats-marquee py-10 text-center md:hidden">
+        <div className="mobile-stats-track">
+          {[...stats, ...stats].map((stat, index) => (
+            <div className="w-[60vw] shrink-0" key={`${stat.label}-${index}`} aria-hidden={index >= stats.length}>
+              <strong className="text-[clamp(26px,7vw,30px)] font-semibold tabular-nums">{stat.value}{stat.suffix}</strong>
+              <p className="mt-4 text-sm font-medium">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto hidden max-w-[1440px] grid-cols-4 px-10 py-11 text-center md:grid xl:px-20">
         {stats.map((stat) => (
           <div key={stat.label}>
             <Counter value={stat.value} suffix={stat.suffix} active={active} />
-            <p className="mt-4 text-sm font-medium md:text-base">{stat.label}</p>
+            <p className="mt-4 text-base font-medium">{stat.label}</p>
           </div>
         ))}
       </div>
