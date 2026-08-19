@@ -13,21 +13,21 @@ const services = [
     description:
       "Tailored insurance solutions designed to protect wealth, lifestyle, and long-term financial security.",
     icon: "/assets/home/client.svg",
-    href: "/private-clients",
+    href: "/private-clients/health-insurance",
   },
   {
     title: "Commercial",
     description:
       "Strategic insurance solutions designed to protect businesses, assets, and operations from risks.",
     icon: "/assets/home/commercial.svg",
-    href: "/commercial",
+    href: "/commercial/group-health-insurance",
   },
   {
     title: "Reinsurance",
     description:
       "Specialized reinsurance solutions designed to optimize risk transfer and strengthen financial stability.",
     icon: "/assets/home/reinsurance.svg",
-    href: "/reinsurance",
+    href: "/reinsurance/transactional-risk-covers",
   },
 ];
 
@@ -37,36 +37,42 @@ const serviceSnapshots = [
     title: "Health Insurance",
     description:
       "Individual and family health plans with access to premium hospital networks and international medical coverage.",
+    href: "/private-clients/health-insurance",
   },
   {
     category: "Private",
     title: "Life & PCG",
     description:
       "Wealth-protective strategies and private client group coverage for ultra HNI families and business principals.",
+    href: "/private-clients/high-net-worth-solutions",
   },
   {
     category: "Private",
     title: "Auto Insurance",
     description:
       "Comprehensive motor coverage for personal and fleet vehicles with dedicated claims support and accident assistance.",
+    href: "/private-clients/private-car-insurance",
   },
   {
     category: "Commercial",
     title: "Employee Benefits",
     description:
       "Group health, life, and wellness programs designed to attract, retain, and protect your workforce.",
+    href: "/commercial/group-health-insurance",
   },
   {
     category: "Commercial",
     title: "Liability & Cyber",
     description:
       "D&O, E&O, EPL, and cyber fidelity solutions for the modern regulatory and threat environment.",
+    href: "/commercial/cyber-crime-insurance",
   },
   {
     category: "Commercial",
     title: "Treaty & Facultative",
     description:
       "Structured reinsurance placements via our global network across Lloyd's, European, and Asian markets.",
+    href: "/reinsurance/transactional-risk-covers",
   },
 ];
 
@@ -77,7 +83,7 @@ const heroProducts = [
     description:
       "Protect your vehicle against accidents, damage, theft, and third-party liabilities with coverage designed for real-world driving risks.",
     image: "/assets/home/solution-auto.png",
-    href: "/private-clients",
+    href: "/private-clients/private-car-insurance",
   },
   {
     category: "Commercial",
@@ -85,7 +91,7 @@ const heroProducts = [
     description:
       "Tailored employee benefit solutions that enhance protection, improve retention, and support a healthier, more secure workforce.",
     image: "/assets/home/solution-benefits.png",
-    href: "/commercial",
+    href: "/private-clients/employer-employee-insurance",
   },
   {
     category: "Private",
@@ -93,7 +99,7 @@ const heroProducts = [
     description:
       "Coverage for medical expenses, hospitalization, and critical care — ensuring financial security during unexpected health situations.",
     image: "/assets/home/solution-health.png",
-    href: "/private-clients",
+    href: "/private-clients/health-insurance",
   },
 ];
 
@@ -205,9 +211,10 @@ export default function Home() {
 
             <div className="mt-14 grid pb-16 md:grid-cols-3 md:pb-20">
               {services.map((service, index) => (
-                <article
+                <Link
                   key={service.title}
-                  className={`py-8 md:px-8 md:py-0 xl:px-10 ${index ? "border-t border-[#b8b8b8] md:border-l md:border-t-0" : ""}`}
+                  href={service.href}
+                  className={`group py-8 md:px-8 md:py-0 xl:px-10 ${index ? "border-t border-[#b8b8b8] md:border-l md:border-t-0" : ""}`}
                 >
                   <Image
                     src={service.icon}
@@ -223,10 +230,7 @@ export default function Home() {
                   <p className="mt-4 min-h-[84px] text-base leading-7 text-[#555555]">
                     {service.description}
                   </p>
-                  <Link
-                    href={service.href}
-                    className="group mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]"
-                  >
+                  <span className="mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]">
                     Know More
                     <Image
                       src="/assets/shared/arrow-right.svg"
@@ -236,8 +240,8 @@ export default function Home() {
                       className="size-[20px] transition-transform duration-300 group-hover:translate-x-1.5"
                       aria-hidden
                     />
-                  </Link>
-                </article>
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -258,8 +262,9 @@ export default function Home() {
 
             <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {serviceSnapshots.map((service) => (
-                <article
+                <Link
                   key={service.title}
+                  href={service.href}
                   className="group flex min-h-[245px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_30px_rgba(25,34,80,0.03)] transition duration-300 hover:-translate-y-1 hover:bg-[#0A4E08] hover:shadow-[0_14px_35px_rgba(10,78,8,0.18)] hover:cursor-pointer md:p-7"
                 >
                   <div className="flex items-center justify-between">
@@ -291,7 +296,7 @@ export default function Home() {
                       {service.description}
                     </p>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>
@@ -442,15 +447,17 @@ export default function Home() {
                 image: "/assets/blogs/blog1.png",
                 title:
                   "Understanding D&O Liability in India's Evolving Corporate Governance Landscape",
+                href: "/blogs/understanding-do-liability-india-corporate-governance",
               },
               {
                 image: "/assets/blogs/blog2.png",
                 title:
                   "Cyber Insurance in India: Why every business needs it in 2026",
+                href: "/blogs/cyber-insurance-india-why-every-business-needs-it-2026",
               },
             ].map((article) => (
               <article key={article.title}>
-                <Link href="/blogs" className="group block">
+                <Link href={article.href} className="group block">
                   <div className="relative aspect-[1.55/1] overflow-hidden rounded-lg bg-[#e8e8e8]">
                     <Image
                       src={article.image}
@@ -503,7 +510,7 @@ export default function Home() {
             </p>
             <Link
               href="/about-us"
-              className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition hover:opacity-70"
+              className="group mt-5 inline-flex items-center gap-2 text-base font-semibold text-[#0A4E08] transition"
             >
               Read More
               <Image
@@ -511,7 +518,7 @@ export default function Home() {
                 alt=""
                 width={18}
                 height={18}
-                className="size-[20px]"
+                className="size-[20px] transition-transform duration-300 group-hover:translate-x-1.5"
                 aria-hidden
               />
             </Link>

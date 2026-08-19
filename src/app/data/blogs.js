@@ -1,5 +1,29 @@
 export const blogs = [
   {
+    slug: "understanding-do-liability-india-corporate-governance",
+    title: "Understanding D&O Liability in India's Evolving Corporate Governance Landscape",
+    image: "/assets/blogs/blog1.png",
+    category: "Directors & Officers Liability",
+    excerpt: "As corporate governance standards evolve, directors and officers face greater scrutiny and personal exposure. D&O insurance helps protect leadership while supporting confident decision-making.",
+    sections: [
+      { heading: "Leadership comes with personal exposure", body: ["Directors and officers make decisions that affect shareholders, employees, customers, and regulators. Allegations of wrongful acts, breaches of duty, or failures in oversight can lead to investigations and claims against both the organisation and its leaders."] },
+      { heading: "What D&O insurance can protect", body: ["A well-structured D&O policy can support defence costs and covered settlements arising from management decisions."], bullets: ["Claims alleging breach of fiduciary duty.", "Regulatory investigations and proceedings.", "Employment and stakeholder allegations.", "Protection where the company cannot indemnify an individual."] },
+      { heading: "Governance and insurance should work together", body: ["Insurance is strongest when paired with clear governance, documented decisions, effective controls, and timely disclosure. Regular policy reviews help ensure protection keeps pace with changing responsibilities and regulation."] },
+    ],
+  },
+  {
+    slug: "cyber-insurance-india-why-every-business-needs-it-2026",
+    title: "Cyber Insurance in India: Why every business needs it in 2026",
+    image: "/assets/blogs/blog2.png",
+    category: "Cyber Insurance",
+    excerpt: "Cyber incidents now affect organisations of every size. In 2026, cyber insurance is an essential part of a broader resilience plan for managing recovery costs, liability, and business interruption.",
+    sections: [
+      { heading: "Cyber risk is a business risk", body: ["Ransomware, data breaches, payment fraud, and system outages can interrupt operations, create legal obligations, and damage customer trust. Smaller organisations are exposed too, especially when they depend on cloud services and connected supply chains."] },
+      { heading: "How cyber insurance supports recovery", body: ["Cyber cover can bring together financial protection and specialist incident support when speed matters most."], bullets: ["Forensic investigation and breach response.", "Data restoration and business interruption.", "Legal, notification, and regulatory expenses.", "Liability arising from compromised information."] },
+      { heading: "Coverage complements strong controls", body: ["Insurers increasingly assess access controls, backups, patching, employee awareness, and response planning. Combining these safeguards with suitable insurance limits creates a more dependable cyber resilience strategy."] },
+    ],
+  },
+  {
     slug: "why-every-growing-business-needs-insurance",
     title: "Why Every Growing Business Needs Insurance",
     image: "/assets/blogs/blog-growing-business.png",

@@ -42,7 +42,7 @@ function ContactItem({ icon, title, children }) {
 const contactServiceGroups = [
   ...privateClientsMenu.map((section) => ({ ...section, segment: "Private Clients" })),
   ...commercialMenu.map((section) => ({ ...section, segment: "Commercial" })),
-  { title: "Transactional Risk", segment: "Reinsurance", links: reinsuranceMenu },
+  ...reinsuranceMenu.map((section) => ({ ...section, segment: "Reinsurance" })),
 ].filter((section) => section.links.length > 0);
 
 export default function ContactUsPage() {
@@ -61,7 +61,7 @@ export default function ContactUsPage() {
                 </ContactItem>
                 <ContactItem icon="mail" title="Email"><a href="mailto:support@equirusraghnall.com">support@equirusraghnall.com</a></ContactItem>
                 <ContactItem icon="phone" title="Phone & What's app"><a href="tel:+917045161616">+91-7045161616</a></ContactItem>
-                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="https://www.instagram.com/equirus_raghnall/">Instagram</a><span>|</span><a href="https://in.linkedin.com/company/equirusraghnall">LinkedIn</a><span>|</span><a href="https://www.facebook.com/Raghnallinsurance/">Facebook</a><span>|</span></div></ContactItem>
+                <ContactItem icon="user" title="Follow Us"><div className="flex flex-wrap gap-2 uppercase"><a href="https://www.instagram.com/equirus_raghnall/" target="_blank" rel="noopener noreferrer">Instagram</a><span>|</span><a href="https://in.linkedin.com/company/equirusraghnall" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>|</span><a href="https://www.facebook.com/Raghnallinsurance/" target="_blank" rel="noopener noreferrer">Facebook</a><span>|</span></div></ContactItem>
               </div>
             </div>
 

@@ -17,7 +17,7 @@ const navigation = [
 const mobileServiceMenus = {
   "Private Clients": privateClientsMenu,
   Commercial: commercialMenu,
-  Reinsurance: [{ title: "Reinsurance", links: reinsuranceMenu }],
+  Reinsurance: reinsuranceMenu,
 };
 
 export default function Navbar() {
@@ -140,7 +140,7 @@ export default function Navbar() {
                 </div>
               </div>
             ) : item.label === "Reinsurance" ? (
-              <div className="group/reinsurance flex h-full items-center" key={item.label} onMouseEnter={closeFocusedDesktopMenu}>
+              <div className="group/reinsurance relative flex h-full items-center" key={item.label} onMouseEnter={closeFocusedDesktopMenu}>
                 <Link
                   href={item.href}
                   onClick={(event) => event.preventDefault()}
@@ -157,24 +157,26 @@ export default function Navbar() {
                   />
                 </Link>
 
-                <div className="invisible absolute inset-x-0 top-full border-t border-black/5 bg-white opacity-0 shadow-[0_12px_24px_rgba(0,0,0,0.08)] transition duration-200 group-hover/reinsurance:visible group-hover/reinsurance:opacity-100 group-focus-within/reinsurance:visible group-focus-within/reinsurance:opacity-100">
-                  <div className="mx-auto min-h-[320px] max-w-[1440px] px-9 py-7 xl:px-14">
-                    <h2 className="mb-4 text-[15px] font-medium text-[#26720f]">
-                      Actual
-                    </h2>
-                    <ul className="space-y-3">
-                      {reinsuranceMenu.map((service) => (
-                        <li key={service.slug}>
-                          <Link
-                            href={`/reinsurance/${service.slug}`}
-                            className="block text-[13px] leading-5 text-[#444444] transition-colors hover:text-[#0a4e08]"
-                          >
-                            {service.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="invisible absolute left-1/2 top-full w-[340px] -translate-x-1/2 rounded-b-lg border border-t-0 border-black/5 bg-white p-5 opacity-0 shadow-[0_12px_24px_rgba(0,0,0,0.08)] transition duration-200 group-hover/reinsurance:visible group-hover/reinsurance:opacity-100 group-focus-within/reinsurance:visible group-focus-within/reinsurance:opacity-100">
+                  {reinsuranceMenu.map((section) => (
+                    <div key={section.title}>
+                      <h2 className="mb-3 text-[15px] font-medium text-[#26720f]">
+                        {section.title}
+                      </h2>
+                      <ul className="space-y-3">
+                        {section.links.map((service) => (
+                          <li key={service.slug}>
+                            <Link
+                              href={`/reinsurance/${service.slug}`}
+                              className="block text-[13px] leading-5 text-[#444444] transition-colors hover:text-[#0a4e08]"
+                            >
+                              {service.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             ) : (

@@ -7,6 +7,8 @@ export default function SectionRevealManager() {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (["/privacy-policy", "/grievance-redressal-policy"].includes(pathname)) return;
+
     const main = document.querySelector("main");
     if (!main) return;
 

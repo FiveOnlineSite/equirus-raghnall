@@ -8,6 +8,8 @@ const tabs = ["Blogs", "Risk Reports", "Market Updates", "Case Studies"];
 
 const tabSlugs = {
   Blogs: [
+    "understanding-do-liability-india-corporate-governance",
+    "cyber-insurance-india-why-every-business-needs-it-2026",
     "why-every-growing-business-needs-insurance",
     "building-better-employee-benefits-programs",
     "building-resilience-before-risks-become-reality",

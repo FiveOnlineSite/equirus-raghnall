@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 const services = [
   ...privateClientsMenu.flatMap((section) => section.links),
   ...commercialMenu.flatMap((section) => section.links),
-  ...reinsuranceMenu,
+  ...reinsuranceMenu.flatMap((section) => section.links),
 ];
 
 const serviceNames = new Map(

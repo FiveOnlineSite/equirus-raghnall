@@ -1,9 +1,19 @@
+"use client";
+
 import Image from "next/image";
 
+const WHATSAPP_URL = "https://wa.me/9876543210";
+
 export default function WhatsAppFloatingButton() {
+  function addCurrentPageToMessage(event) {
+    const message = `Hi, I have a query about ${window.location.href}`;
+    event.currentTarget.href = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+  }
+
   return (
     <a
-      href="https://wa.me/917045161616"
+      href={WHATSAPP_URL}
+      onClick={addCurrentPageToMessage}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
