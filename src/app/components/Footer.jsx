@@ -15,7 +15,6 @@ const links = [
 ];
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms & Conditions", href: "#" },
   { label: "Disclaimer", href: "/disclaimer" },
   { label: "Code Of Conduct", href: "/pdf/code_of_conduct.pdf", newTab: true },
   { label: "Grievance Redressal Policy", href: "/grievance-redressal-policy" },
