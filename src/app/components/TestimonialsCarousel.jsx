@@ -63,9 +63,9 @@ export default function TestimonialsCarousel() {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide className="!h-auto !w-full sm:!w-[60vw] lg:!w-[48vw] lg:!max-w-[720px]" key={testimonial.name}>
-              <article className="mx-5 flex h-full min-h-[250px] flex-col rounded-lg bg-white p-5 text-[#242424] shadow-sm sm:mx-0 sm:min-h-[280px] sm:p-7 md:min-h-[300px] md:p-8">
+              <article className="mx-5 flex h-full min-h-[250px] flex-col rounded-lg bg-white px-5 py-4 text-[#242424] shadow-sm sm:mx-0 sm:min-h-[280px] sm:px-7 sm:py-5 md:min-h-[300px] md:px-8 md:py-6">
                 <span className="font-serif text-4xl font-bold leading-none text-black sm:text-5xl" aria-hidden="true">“</span>
-                <p className="mt-3 text-sm leading-[1.7] text-[#555555] sm:mt-5 sm:text-base sm:leading-[1.85]">{testimonial.quote}</p>
+                <p className="text-sm leading-[1.7] text-[#555555] sm:mt-2 sm:text-base sm:leading-[1.85]">{testimonial.quote}</p>
                 <div className="mt-auto flex items-center gap-3 pt-5 sm:gap-4 sm:pt-8">
                   <span className="relative size-11 shrink-0 overflow-hidden rounded-full bg-[#eef0ff]">
                     <Image src={testimonial.image} alt="" fill sizes="44px" className="object-cover" />

@@ -36,24 +36,44 @@ button {
   bottom: 0 !important;
 }
 
-:is(section, footer)[data-reveal="pending"] {
-  opacity: 0;
-  transform: translateY(72px) scale(0.97);
-}
-
-:is(section, footer)[data-reveal] {
+:is(section, footer)[data-reveal] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
   transition:
-    opacity 950ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 950ms cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1) 100ms,
+    translate 800ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
 }
 
-:is(section, footer)[data-reveal="visible"] {
+:is(section, footer)[data-reveal="pending"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  opacity: 0;
+  translate: 0 24px;
+}
+
+:is(section, footer)[data-reveal="visible"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
   opacity: 1;
-  transform: translateY(0);
+  translate: 0 0;
 }
 
-footer[data-reveal] {
-  transform: none;
+section[data-reveal-hero="true"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  animation: hero-text-rise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:is(form, article, div[class*="rounded-"][class*="shadow-"])
+  :is(h1, h2, h3, h4, h5, h6, p, li, img, video):not(.team-card-description) {
+  opacity: 1;
+  translate: none;
+  transition: none;
+  animation: none;
+}
+
+@keyframes hero-text-rise {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 
 .testimonials-swiper .swiper-pagination-bullet {
@@ -174,10 +194,14 @@ footer[data-reveal] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :is(section, footer)[data-reveal] {
-    opacity: 1;
-    transform: none;
+  :is(section, footer)[data-reveal] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+    opacity: revert;
+    translate: none;
     transition: none;
+  }
+
+  section[data-reveal-hero="true"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+    animation: none;
   }
 
   .home-hero-palm,

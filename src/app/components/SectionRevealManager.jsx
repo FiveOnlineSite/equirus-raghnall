@@ -25,7 +25,7 @@ export default function SectionRevealManager() {
               observer.unobserve(entry.target);
             });
           },
-          { rootMargin: "0px 0px -12%", threshold: 0.01 },
+          { rootMargin: "0px 0px -25%", threshold: 0.01 },
         );
 
     function registerSections() {
@@ -33,6 +33,9 @@ export default function SectionRevealManager() {
         ...main.querySelectorAll("section:not(footer section)"),
         ...document.querySelectorAll("footer"),
       ];
+      const heroSection = revealTargets.find(
+        (target) => target.tagName === "SECTION" && !target.parentElement?.closest("section"),
+      );
 
       revealTargets.forEach((section) => {
         if (
@@ -48,8 +51,15 @@ export default function SectionRevealManager() {
           return;
         }
 
+        if (section === heroSection) {
+          section.dataset.revealHero = "true";
+          section.dataset.reveal = "visible";
+          return;
+        }
+
         const bounds = section.getBoundingClientRect();
-        const isAlreadyVisible = bounds.top < window.innerHeight && bounds.bottom > 0;
+        const revealLine = window.innerHeight * 0.75;
+        const isAlreadyVisible = bounds.top < revealLine && bounds.bottom > 0;
         section.dataset.reveal = isAlreadyVisible ? "visible" : "pending";
 
         if (!isAlreadyVisible) observer.observe(section);
@@ -64,7 +74,10 @@ export default function SectionRevealManager() {
     return () => {
       observer?.disconnect();
       mutationObserver.disconnect();
-      registeredSections.forEach((section) => section.removeAttribute("data-reveal"));
+      registeredSections.forEach((section) => {
+        section.removeAttribute("data-reveal");
+        section.removeAttribute("data-reveal-hero");
+      });
     };
   }, [pathname]);
 

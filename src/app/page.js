@@ -498,7 +498,7 @@ export default function Home() {
               height={200}
               className="h-[180px] w-[180px] object-contain"
             />
-            <p className="text-base leading-7 text-[#555555]">
+            <p className="text-sm md:text-base  leading-7 text-[#555555]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

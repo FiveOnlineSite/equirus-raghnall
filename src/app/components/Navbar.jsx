@@ -45,7 +45,7 @@ export default function Navbar() {
             width={130}
             height={104}
             priority
-            className="h-[92px] w-[115px] object-cover md:h-[104px] md:w-[130px]"
+            className="h-[84px] w-[105px] object-cover md:h-[104px] md:w-[130px]"
           />
         </Link>
         <nav
@@ -207,20 +207,20 @@ export default function Navbar() {
         </Link>
         <button
           type="button"
-          className="grid size-10 place-items-center rounded-lg text-[#0a4e08] md:size-11 lg:hidden"
+          className="grid size-9 place-items-center rounded-lg text-[#0a4e08] md:size-11 lg:hidden"
           aria-label={isOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((open) => !open)}
         >
-          <span className="relative block h-[18px] w-[22px] md:h-5 md:w-6" aria-hidden>
+          <span className="relative block h-4 w-5 md:h-5 md:w-6" aria-hidden>
             <span
-              className={`absolute left-0 top-0 h-0.5 w-[22px] bg-current transition-transform md:w-6 ${isOpen ? "translate-y-2 rotate-45 md:translate-y-[9px]" : ""}`}
+              className={`absolute left-0 top-0 h-0.5 w-5 bg-current transition-transform md:w-6 ${isOpen ? "translate-y-[7px] rotate-45 md:translate-y-[9px]" : ""}`}
             />
             <span
-              className={`absolute left-0 top-2 h-0.5 w-[22px] bg-current transition-opacity md:top-[9px] md:w-6 ${isOpen ? "opacity-0" : ""}`}
+              className={`absolute left-0 top-[7px] h-0.5 w-5 bg-current transition-opacity md:top-[9px] md:w-6 ${isOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`absolute left-0 top-4 h-0.5 w-[22px] bg-current transition-transform md:top-[18px] md:w-6 ${isOpen ? "-translate-y-2 -rotate-45 md:-translate-y-[9px]" : ""}`}
+              className={`absolute left-0 top-[14px] h-0.5 w-5 bg-current transition-transform md:top-[18px] md:w-6 ${isOpen ? "-translate-y-[7px] -rotate-45 md:-translate-y-[9px]" : ""}`}
             />
           </span>
         </button>
