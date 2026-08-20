@@ -36,6 +36,50 @@ button {
   bottom: 0 !important;
 }
 
+:is(section, footer)[data-reveal]
+  :is(h1, h2, h3, h4, h5, h6, p, li, article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1) 100ms,
+    translate 1100ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
+}
+
+:is(section, footer)[data-reveal="pending"]
+  :is(h1, h2, h3, h4, h5, h6, p, li, article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  opacity: 0;
+  translate: 0 24px;
+}
+
+:is(section, footer)[data-reveal="visible"]
+  :is(h1, h2, h3, h4, h5, h6, p, li, article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  opacity: 1;
+  translate: 0 0;
+}
+
+section[data-reveal-hero="true"]
+  :is(h1, h2, h3, h4, h5, h6, p, li, article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+  animation: section-content-uplift 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:is(article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"])
+  :is(h1, h2, h3, h4, h5, h6, p, li):not(.team-card-description) {
+  opacity: 1;
+  translate: none;
+  transition: none;
+  animation: none;
+}
+
+@keyframes section-content-uplift {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 .testimonials-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
@@ -154,6 +198,14 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  :is(section, footer)[data-reveal]
+    :is(h1, h2, h3, h4, h5, h6, p, li, article, form, a[class*="rounded-"][class*="shadow-"], div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+    opacity: 1;
+    translate: none;
+    transition: none;
+    animation: none;
+  }
+
   .home-hero-palm,
   .home-hero-globe {
     opacity: 1;

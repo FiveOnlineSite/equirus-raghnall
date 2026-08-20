@@ -210,7 +210,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-white py-16 md:py-20">
+        <section className="bg-white pb-20 pt-12">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
               <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Management Team</h2>
@@ -238,10 +238,10 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-[#F8F9FF] py-16 md:py-20">
+        <section className="bg-[#F8F9FF] pb-20 pt-12">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <div className="text-center">
-              <h2 className="mt-5 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Management Team- Reinsurance</h2>
+              <h2 className="mt-2 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">Management Team- Reinsurance</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-4">
