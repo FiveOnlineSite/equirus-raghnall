@@ -142,7 +142,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 End-to-End Insurance &amp; Risk Solutions
               </p>
-              <h1 className="mt-7 text-3xl font-semibold leading-[1.05] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl sm:leading-[1.02] md:text-[48px]">
+              <h1 className="mt-7 text-4xl font-semibold leading-[1.05] tracking-[-0.025em] text-[#0d0d0d] sm:text-5xl sm:leading-[1.02] md:text-[48px]">
                 <span className="block">Not Just Coverage</span>
                 <span className="block lg:whitespace-nowrap">Complete Risk Strategy.</span>
               </h1>
