@@ -32,7 +32,7 @@ export default function ServiceHero({
         </div>
 
         {features.length ? (
-          <div className="mx-auto mb-10 mt-auto grid w-full max-w-[760px] gap-5 text-left sm:grid-cols-3 md:mb-12 md:pt-24">
+          <div className="mx-auto mb-10 mt-auto grid w-full max-w-[760px] translate-y-3 gap-3 text-left sm:grid-cols-3 md:mb-12 md:translate-y-0 md:gap-5 md:pt-24">
             {features.map((feature) => (
               <div className="flex items-center justify-center gap-4 sm:justify-start" key={feature.title}>
                 {feature.icon ? (
