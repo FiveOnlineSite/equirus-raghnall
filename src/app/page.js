@@ -137,7 +137,7 @@ export default function Home() {
       <Navbar />
       <main>
         <section className="min-h-[570px] bg-white">
-          <div className="mx-auto grid min-h-[570px] max-w-[1440px] items-center gap-10 overflow-hidden px-5 pb-0 pt-10 md:px-10 md:pt-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-20">
+          <div className="mx-auto grid min-h-[570px] max-w-[1440px] items-center gap-4 overflow-hidden px-5 pb-0 pt-10 md:gap-10 md:px-10 md:pt-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-20">
             <div className="min-w-0 max-w-[600px]">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
                 End-to-End Insurance &amp; Risk Solutions
