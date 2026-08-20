@@ -10,7 +10,7 @@ export default function ServiceHero({
   imagePosition = "center center",
 }) {
   return (
-    <section className="relative isolate min-h-[560px] overflow-hidden bg-[#F7F8FA]">
+    <section className="relative isolate min-h-[calc(100svh-88px)] overflow-hidden bg-[#F7F8FA] md:min-h-[560px]">
       {image ? (
         <Image
           src={image}
@@ -24,7 +24,7 @@ export default function ServiceHero({
       ) : null}
       <div className="absolute inset-0 -z-10 bg-white/10" aria-hidden="true" />
 
-      <div className="mx-auto flex min-h-[560px] max-w-[1440px] flex-col px-5 pb-9 pt-14 text-center md:px-10 md:pt-16 xl:px-20">
+      <div className="mx-auto flex min-h-[calc(100svh-88px)] max-w-[1440px] flex-col px-5 pb-9 pt-14 text-center md:min-h-[560px] md:px-10 md:pt-16 xl:px-20">
         <div className="mx-auto max-w-[650px]">
           <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>
           <h1 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold leading-[1.08] tracking-[-0.025em] text-[#080808] md:text-[48px]">{title}</h1>
