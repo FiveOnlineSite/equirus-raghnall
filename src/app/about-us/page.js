@@ -97,7 +97,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-white py-16 md:py-20">
+        <section className="bg-white pb-8 pt-16 md:py-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">About The Company</p>
             <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
