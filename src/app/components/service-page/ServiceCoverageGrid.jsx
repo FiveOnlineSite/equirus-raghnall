@@ -8,7 +8,7 @@ export default function ServiceCoverageGrid({
   linkLabel = "Learn More",
 }) {
   return (
-    <section className="bg-[#F8F9FF] py-8 md:py-16">
+    <section className="bg-[#F8F9FF] py-8 md:pb-16 md:pt-6">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#376E00] sm:text-base">{label}</p>

@@ -201,7 +201,7 @@ export default function Navbar() {
         </nav>
         <Link
           href="/contact-us"
-          className="hidden h-11 w-[158px] items-center justify-center rounded-lg bg-[#0a4e08] px-3 text-sm font-semibold text-white transition-colors hover:bg-[#083d06] lg:flex"
+          className="hidden h-11 w-[158px] items-center justify-center rounded-lg bg-[#0a4e08] px-3 text-sm font-semibold text-white transition hover:opacity-90 lg:flex"
         >
           Claim Advocacy
         </Link>
@@ -300,7 +300,7 @@ export default function Navbar() {
             <Link
               href="/contact-us"
               onClick={closeMobileMenu}
-              className="mt-5 flex h-11 items-center justify-center rounded-lg bg-[#0a4e08] text-sm font-semibold text-white"
+              className="mt-5 flex h-11 items-center justify-center rounded-lg bg-[#0a4e08] text-sm font-semibold text-white transition hover:opacity-90"
             >
               Claim Advocacy
             </Link>

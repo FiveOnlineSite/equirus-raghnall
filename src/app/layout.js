@@ -1,5 +1,4 @@
 import { Inter, Poppins } from "next/font/google";
-import SectionRevealManager from "./components/SectionRevealManager";
 import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 import "./globals.css";
 
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         {children}
-        <SectionRevealManager />
         <WhatsAppFloatingButton />
       </body>
     </html>

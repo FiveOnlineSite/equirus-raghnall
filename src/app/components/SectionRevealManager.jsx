@@ -20,9 +20,7 @@ export default function SectionRevealManager() {
       : new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-              entry.target.dataset.reveal = "visible";
-              observer.unobserve(entry.target);
+              entry.target.dataset.reveal = entry.isIntersecting ? "visible" : "pending";
             });
           },
           { rootMargin: "0px 0px -40%", threshold: 0.01 },
@@ -61,8 +59,7 @@ export default function SectionRevealManager() {
         const revealLine = window.innerHeight * 0.6;
         const isAlreadyVisible = bounds.top < revealLine && bounds.bottom > 0;
         section.dataset.reveal = isAlreadyVisible ? "visible" : "pending";
-
-        if (!isAlreadyVisible) observer.observe(section);
+        observer.observe(section);
       });
     }
 

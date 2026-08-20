@@ -71,7 +71,7 @@ export default function CounterStats() {
         </div>
       </div>
 
-      <div className="mx-auto hidden max-w-[1440px] grid-cols-4 px-10 py-11 text-center md:grid xl:px-20">
+      <div className="mx-auto hidden max-w-[1440px] grid-cols-4 px-10 py-6 text-center md:grid xl:px-20">
         {stats.map((stat) => (
           <div key={stat.label}>
             <Counter value={stat.value} suffix={stat.suffix} active={active} />

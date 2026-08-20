@@ -153,29 +153,29 @@ export default function Home() {
               </p>
               <Link
                 href="#services"
-                className="mt-6 md:mt-10 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-base font-semibold text-white transition hover:opacity-90"
+                className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-base font-semibold text-white transition hover:opacity-90 md:mt-10"
               >
                 Visit Our Services
               </Link>
 
-              <div className="mt-8 flex items-center gap-3 sm:gap-5">
-                <div className="relative h-8 w-[110px] sm:h-10 sm:w-[118px]" aria-hidden="true">
+              <div className="mt-10 flex items-center gap-3 sm:gap-5 md:mt-8">
+                <div className="relative h-10 w-[100px]" aria-hidden="true">
                   {[
                     { src: "/assets/home/trusted-avatar-1.png", left: 0 },
-                    { src: "/assets/home/trusted-avatar-2.png", left: 23 },
-                    { src: "/assets/home/trusted-avatar-3.png", left: 51 },
-                    { src: "/assets/home/trusted-avatar-4.png", left: 78 },
+                    { src: "/assets/home/trusted-avatar-2.png", left: 20 },
+                    { src: "/assets/home/trusted-avatar-3.png", left: 40 },
+                    { src: "/assets/home/trusted-avatar-4.png", left: 60 },
                   ].map((avatar) => (
                     <span
                       key={avatar.src}
-                      className="absolute top-0 block size-8 overflow-hidden rounded-full sm:size-10"
+                      className="absolute top-0 block size-10 overflow-hidden rounded-full"
                       style={{ left: avatar.left }}
                     >
                       <Image
                         src={avatar.src}
                         alt=""
                         fill
-                        sizes="(max-width: 639px) 32px, 40px"
+                        sizes="40px"
                         className="object-cover"
                       />
                     </span>
@@ -302,7 +302,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#F8F9FF] py-4 md:py-20">
+        <section className="bg-[#F8F9FF] pb-20 pt-8">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20 xl:px-20">
             <div className="max-w-[560px]">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">
