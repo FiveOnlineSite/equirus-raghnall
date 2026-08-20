@@ -97,7 +97,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-white pb-8 pt-16 md:py-20">
+        <section className="bg-white pt-16 md:pt-20">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
             <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">About The Company</p>
             <h2 className="mt-6 text-[clamp(24px,7vw,30px)] font-semibold tracking-[-0.02em] text-[#111111] md:text-[32px]">
@@ -111,9 +111,10 @@ export default function AboutUsPage() {
                 Our multidisciplinary team of insurance specialists, risk engineers, claims professionals, legal experts, and industry practitioners advises clients across sectors including infrastructure, manufacturing, financial services, healthcare, logistics, renewable energy, technology, real estate, and global trade. By combining technical expertise with commercial insight, we design solutions that are aligned with each client&apos;s strategic objectives and risk appetite.
               </p>
             </div>
-            <AboutCounters />
           </div>
         </section>
+
+        <AboutCounters />
 
         <section className="bg-[#F8F9FF] py-16 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:px-20">

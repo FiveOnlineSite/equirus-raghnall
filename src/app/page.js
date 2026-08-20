@@ -153,13 +153,13 @@ export default function Home() {
               </p>
               <Link
                 href="#services"
-                className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-base font-semibold text-white transition hover:opacity-90"
+                className="mt-6 md:mt-10 inline-flex h-12 items-center justify-center rounded-md bg-[#0A4E08] px-8 text-base font-semibold text-white transition hover:opacity-90"
               >
                 Visit Our Services
               </Link>
 
-              <div className="mt-10 flex items-center gap-3 sm:gap-5">
-                <div className="relative h-10 w-[118px]" aria-hidden="true">
+              <div className="mt-8 flex items-center gap-3 sm:gap-5">
+                <div className="relative h-8 w-[110px] sm:h-10 sm:w-[118px]" aria-hidden="true">
                   {[
                     { src: "/assets/home/trusted-avatar-1.png", left: 0 },
                     { src: "/assets/home/trusted-avatar-2.png", left: 23 },
@@ -168,14 +168,14 @@ export default function Home() {
                   ].map((avatar) => (
                     <span
                       key={avatar.src}
-                      className="absolute top-0 block size-10 overflow-hidden rounded-full"
+                      className="absolute top-0 block size-8 overflow-hidden rounded-full sm:size-10"
                       style={{ left: avatar.left }}
                     >
                       <Image
                         src={avatar.src}
                         alt=""
                         fill
-                        sizes="40px"
+                        sizes="(max-width: 639px) 32px, 40px"
                         className="object-cover"
                       />
                     </span>
@@ -209,7 +209,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="mt-14 grid pb-16 md:grid-cols-3 md:pb-20">
+            <div className="mt-3 grid pb-6 md:mt-14 md:grid-cols-3 md:pb-20">
               {services.map((service, index) => (
                 <Link
                   key={service.title}
@@ -265,7 +265,7 @@ export default function Home() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group flex min-h-[245px] flex-col rounded-xl bg-white p-6 shadow-[0_8px_30px_rgba(25,34,80,0.03)] transition duration-300 hover:-translate-y-1 hover:bg-[#0A4E08] hover:shadow-[0_14px_35px_rgba(10,78,8,0.18)] hover:cursor-pointer md:p-7"
+                  className="group flex min-h-[245px] flex-col rounded-xl bg-white p-6 shadow-[0_6px_24px_rgba(25,34,80,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-[#0A4E08] hover:shadow-[0_14px_35px_rgba(10,78,8,0.18)] hover:cursor-pointer md:p-7"
                 >
                   <div className="flex items-center justify-between">
                     <span className="rounded-sm bg-[#EBFFD666] px-2.5 py-1 text-xs font-medium uppercase text-[#0A4E08] transition-colors group-hover:text-white">
@@ -302,7 +302,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#F8F9FF] py-16 md:py-20">
+        <section className="bg-[#F8F9FF] py-4 md:py-20">
           <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 md:px-10 lg:grid-cols-[1fr_0.9fr] lg:gap-20 xl:px-20">
             <div className="max-w-[560px]">
               <p className="text-sm font-medium uppercase tracking-[0.04em] text-[#0A4E08] sm:text-base">

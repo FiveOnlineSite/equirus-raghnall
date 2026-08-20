@@ -36,18 +36,18 @@ button {
   bottom: 0 !important;
 }
 
-:is(section, footer)[data-reveal] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+:is(section, footer)[data-reveal] {
   transition:
-    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1) 100ms,
-    translate 800ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
+    opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1) 150ms,
+    translate 1200ms cubic-bezier(0.22, 1, 0.36, 1) 150ms;
 }
 
-:is(section, footer)[data-reveal="pending"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+:is(section, footer)[data-reveal="pending"] {
   opacity: 0;
   translate: 0 24px;
 }
 
-:is(section, footer)[data-reveal="visible"] :is(h1, h2, h3, h4, h5, h6, p, li, img, video, form, article, div[class*="rounded-"][class*="shadow-"]):not(.team-card-description) {
+:is(section, footer)[data-reveal="visible"] {
   opacity: 1;
   translate: 0 0;
 }

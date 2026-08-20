@@ -60,7 +60,7 @@ export default function CounterStats() {
 
   return (
     <section ref={sectionRef} className="bg-[#30337A] text-white" aria-label="Company statistics">
-      <div className="mobile-stats-marquee py-10 text-center md:hidden">
+      <div className="mobile-stats-marquee py-5 text-center md:hidden">
         <div className="mobile-stats-track">
           {[...stats, ...stats].map((stat, index) => (
             <div className="w-[60vw] shrink-0" key={`${stat.label}-${index}`} aria-hidden={index >= stats.length}>

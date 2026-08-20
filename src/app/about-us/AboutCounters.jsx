@@ -44,30 +44,32 @@ function AnimatedNumber({ value, suffix }) {
 
 export default function AboutCounters() {
   return (
-    <>
-      <div className="mobile-stats-marquee mt-12 text-center md:hidden">
-        <div className="mobile-stats-track">
-          {[...stats, ...stats].map((stat, index) => (
-            <div className="w-[60vw] shrink-0 pb-2" key={`${stat.label}-${index}`} aria-hidden={index >= stats.length}>
-              <p className="text-[28px] font-semibold leading-none text-[#0A4E08]">
-                {stat.value}{stat.suffix}
+    <section className="bg-white pb-8 md:pb-20" aria-label="Company statistics">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-20">
+        <div className="mobile-stats-marquee pt-12 text-center md:hidden">
+          <div className="mobile-stats-track">
+            {[...stats, ...stats].map((stat, index) => (
+              <div className="w-[60vw] shrink-0 pb-2" key={`${stat.label}-${index}`} aria-hidden={index >= stats.length}>
+                <p className="text-[28px] font-semibold leading-none text-[#0A4E08]">
+                  {stat.value}{stat.suffix}
+                </p>
+                <p className="mt-5 text-sm text-[#555555]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden grid-cols-4 gap-x-8 pt-14 md:grid">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="text-[32px] font-semibold leading-none text-[#0A4E08]">
+                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="mt-5 text-sm text-[#555555]">{stat.label}</p>
+              <p className="mt-5 text-base text-[#555555]">{stat.label}</p>
             </div>
           ))}
         </div>
       </div>
-
-      <div className="mt-14 hidden grid-cols-4 gap-x-8 md:grid">
-        {stats.map((stat) => (
-          <div key={stat.label}>
-            <p className="text-[32px] font-semibold leading-none text-[#0A4E08]">
-              <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-            </p>
-            <p className="mt-5 text-base text-[#555555]">{stat.label}</p>
-          </div>
-        ))}
-      </div>
-    </>
+    </section>
   );
 }

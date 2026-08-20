@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const inputClass = "mt-2 h-12 w-full rounded-sm border-0 bg-[#f7f7f7] px-4 text-sm outline-none ring-[#0A4E08] transition focus:ring-1";
+const inputClass = "mt-2 h-10 w-full rounded-sm border-0 bg-[#f7f7f7] px-3 text-sm outline-none ring-[#0A4E08] transition focus:ring-1 md:h-12 md:px-4";
 
 export default function ContactForm({ serviceGroups }) {
   const [status, setStatus] = useState("idle");
@@ -58,16 +58,21 @@ export default function ContactForm({ serviceGroups }) {
         <label className="text-sm font-medium">Organization<span className="text-red-600">*</span><input className={inputClass} name="organization" maxLength={150} required /></label>
         <label className="text-sm font-medium">
           What services you are interested in?<span className="text-red-600">*</span>
-          <select className={inputClass} name="service" defaultValue="" required>
-            <option value="" disabled>Select a service</option>
-            {serviceGroups.map((section) => (
-              <optgroup label={`${section.segment} — ${section.title}`} key={`${section.segment}-${section.title}`}>
-                {section.links.map((service) => (
-                  <option value={service.slug} key={service.slug}>{service.label}</option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
+          <div className="relative">
+            <select className={`${inputClass} appearance-none pr-12`} name="service" defaultValue="" required>
+              <option value="" disabled>Select a service</option>
+              {serviceGroups.map((section) => (
+                <optgroup label={`${section.segment} — ${section.title}`} key={`${section.segment}-${section.title}`}>
+                  {section.links.map((service) => (
+                    <option value={service.slug} key={service.slug}>{service.label}</option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+            <svg className="pointer-events-none absolute right-4 top-[calc(50%+4px)] size-4 -translate-y-1/2 text-[#555555]" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
         </label>
         <label className="hidden" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
         <label className="text-sm font-medium md:col-span-2">Write your message<textarea className="mt-2 min-h-32 w-full resize-y rounded-sm border-0 bg-[#f7f7f7] p-4 text-sm outline-none ring-[#0A4E08] focus:ring-1" name="message" maxLength={4000} /></label>
