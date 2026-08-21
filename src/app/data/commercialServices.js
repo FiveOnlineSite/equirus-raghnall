@@ -53,10 +53,10 @@ export const commercialMenu = [
       { label: "Group Cyber Insurance", slug: "group-cyber-insurance" },
     ],
   },
-  {
-    title: "Affinity & Partnership",
-    links: [],
-  },
+  // {
+  //   title: "Affinity & Partnership",
+  //   links: [],
+  // },
 ];
 
 export const commercialServices = commercialMenu.flatMap((group) =>
