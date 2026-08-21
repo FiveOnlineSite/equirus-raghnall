@@ -78,28 +78,28 @@ const serviceSnapshots = [
 
 const heroProducts = [
   {
-    category: "Private Clients",
-    title: "Auto Insurance",
+    category: "Commercial",
+    title: "Cyber & Crime Insurance",
     description:
-      "Protect your vehicle against accidents, damage, theft, and third-party liabilities with coverage designed for real-world driving risks.",
+      "Protect your business against cyberattacks, data breaches, fraud, and crime-related financial losses with coverage tailored to evolving digital risks.",
     image: "/assets/home/solution-auto.png",
-    href: "/private-clients/private-car-insurance",
+    href: "/commercial/cyber-crime-insurance",
+  },
+  {
+    category: "Private Clients",
+    title: "Private Client Group",
+    description:
+      "Bespoke protection for high-value homes, collections, vehicles, travel, and personal liabilities, coordinated around your lifestyle and assets.",
+    image: "/assets/home/solution-benefits.png",
+    href: "/private-clients/private-client-group",
   },
   {
     category: "Commercial",
-    title: "Employee Benefits",
+    title: "Surety Bond",
     description:
-      "Tailored employee benefit solutions that enhance protection, improve retention, and support a healthier, more secure workforce.",
-    image: "/assets/home/solution-benefits.png",
-    href: "/private-clients/employer-employee-insurance",
-  },
-  {
-    category: "Private",
-    title: "Health Insurance",
-    description:
-      "Coverage for medical expenses, hospitalization, and critical care — ensuring financial security during unexpected health situations.",
+      "Strengthen contractual commitments with surety bonds that provide beneficiaries financial assurance without tying up traditional bank limits.",
     image: "/assets/home/solution-health.png",
-    href: "/private-clients/health-insurance",
+    href: "/commercial/surety-bonds",
   },
 ];
 
@@ -372,7 +372,7 @@ export default function Home() {
               {heroProducts.map((product) => (
                 <article
                   key={product.title}
-                  className="overflow-hidden rounded-lg bg-white shadow-[0_2px_12px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
+                  className="flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-[0_2px_12px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
                 >
                   <div className="relative aspect-[1.85/1] overflow-hidden">
                     <Image
@@ -390,7 +390,7 @@ export default function Home() {
                       {product.category}
                     </span>
                   </div>
-                  <div className="p-5 md:p-6">
+                  <div className="flex flex-1 flex-col p-5 md:p-6">
                     <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-2xl">
                       {product.title}
                     </h3>
@@ -399,7 +399,7 @@ export default function Home() {
                     </p>
                     <Link
                       href={product.href}
-                      className="group mt-6 inline-flex items-center gap-3 text-base font-semibold text-[#0A4E08]"
+                      className="group mt-auto inline-flex items-center gap-3 pt-6 text-base font-semibold text-[#0A4E08]"
                     >
                       Explore
                       <Image
